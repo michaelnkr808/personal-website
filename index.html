@@ -6,9 +6,10 @@
     <title>Michael's Personal Website</title>
     <link rel="stylesheet" href="/css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/svg+xml" href="code-fav-icon.svg">
-    <link rel="shortcut icon" href="code-fav-icon.ico">
-    <script src="/js/main.js"></script>
+    <link rel="icon" type="image/svg+xml" href="/media/code-fav-icon.svg?v=2" sizes="any">
+    <link rel="icon" type="image/png" href="code-fav-icon.png?v=2" sizes="32x32">
+    <link rel="apple-touch-icon" href="code-fav-icon.png?v=2" sizes="180x180">
+    <script src="/js/main.js" defer></script>
 </head>
 <body>
     <section id="introduction">
@@ -17,7 +18,7 @@
             <div id="intro-card">
                 <h2 class="header"><span class="word-emphasis">Hey there,</span> its great to meet you!
                     <span id="intro-icon">
-                        <img src="code-fav-icon.svg" alt="tiny command icon">
+                        <img src="/media/code-fav-icon.svg" alt="tiny command icon">
                     </span>
                 </h2>
                 <div id="intro-text">
@@ -31,7 +32,13 @@
                     <div id="intro-thank">Thanks for stopping by!</div>
                 </div>
             </div>
-            <img id="greeting-photo" src="/media/salmon-bridge.JPG" alt="Me sitting on top of Salmon Falls bridge, Folsom" srcset="">
+            <div id="arrow-wrapper">
+                <span id="arrow-text">(me)</span>
+                <img src="/media/long-arrow.svg" alt="Arrow point to me">
+            </div>
+            <div id="intro-img-wrapper">
+                <img id="greeting-photo" src="/media/salmon-bridge.JPG" alt="Me sitting on top of Salmon Falls bridge, Folsom" srcset="">
+            </div>
         </div>
     </section>
     <section id="about-me">
