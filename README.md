@@ -28,6 +28,7 @@ The website is built with the following technologies:
 ├── index.html # Main HTML file
 ├── css/ # Contains main css file
 └── README.md # Project description
+```
 
 ---
 
