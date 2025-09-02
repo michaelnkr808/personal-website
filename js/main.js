@@ -1,7 +1,7 @@
-const faceOffSetX = 0.5;
+const faceOffSetX = 1;
 const faceOffSetY = 0.2;
 
-const arrow = document.querySelector("#arrow-wrapper img")
+const arrow = document.querySelector("#me-arrow-wrapper img")
 const target = document.querySelector("#greeting-photo")
 
 function pointArrow(){
