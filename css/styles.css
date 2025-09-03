@@ -51,7 +51,7 @@
   }
   #intro-right{
     display: flex;
-    margin-right: 10vw;
+    flex: 1;
   }
 
   #intro-left, #intro-right, #intro-card, intro-text{
@@ -149,7 +149,7 @@
     flex-direction: column;
     flex-shrink: 1;
     color: white;
-    height: 50vh;
+    height: 49vh;
     width: 50vw;
     margin: 1vw;
     margin-left: 2vw;
@@ -157,9 +157,8 @@
     border-radius: 3vw;
     background-color: #202226;
     margin-top: 20vh;
-    text-align: center;
     box-shadow: -1vw 1vw 2vw 1vw #0b0d12;
-    min-height: 55vh;
+    min-height: 20vh;
     min-width: 50vw;
     z-index: 1;
   }  
@@ -168,17 +167,15 @@
     display: flex;
     flex-shrink: 0;
     flex-direction: column;
-    height: 80%;
+    height: 100%;
     width: 100%;
     font-size: 1rem;
     margin: 0vh;
     padding: 1vw;
     text-align: start;
-    overflow-wrap: anywhere;
-    word-break: break-word;
   }
   #intro-thank{
-    font-size: 1.5rem;
+    font-size: 1.5em;
     font-weight: 500;
     align-self: center;
   }
@@ -201,6 +198,7 @@
     box-shadow: -5px 5px 20px 20px #0b0d12;
   }
 
+  /* mobile styling */
   @media (max-width: 1000px){
     section{
         margin-left: 0;
@@ -227,7 +225,7 @@
         display: flex;
         justify-content: center;
         width: 100%;
-        padding: 1rem;
+        padding: 10px;
         box-sizing: border-box;
     }
     #intro-right{
@@ -239,15 +237,17 @@
     }
     #intro-card{
         width: 100%;
-        height: 100%;
+        height: auto;
+        min-height: clamp(280px, 42vh, 420px);
+        margin-top: 0;
         margin: 0;
-        padding: 1rem;
         box-sizing: border-box;
         min-width: 0;
         max-width: 100%;
     }
     #intro-text{
-        font-size: 1rem;
+        line-height: 1.4;
+        font-size: .95rem;
         flex-shrink: 0;
     }
     #intro-icon img{
@@ -260,4 +260,19 @@
         background-color: #0a0d14;
       }
     
+  }
+
+  /* tablet styling */
+  @media (max-width: 1024px) and (orientation: portrait){
+    #intro-card{
+      height: auto;          
+      min-height: 36vh;      
+      margin-top: 20vh;       
+    }
+    .header{
+      font-size: .9rem;
+    }
+    #intro-text{
+      line-height: 1.4;
+    }
   }
