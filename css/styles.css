@@ -67,7 +67,7 @@
     color: #0a0d14;
   }
 
-  #next-arrow-wrapper{
+  #intro-next-arrow-wrapper{
     display: flex;
     align-items: flex-end;
     height: 12vh;
@@ -76,7 +76,7 @@
     z-index: 3;
   } 
 
-  #next-arrow-wrapper > *{
+  .next-button{
     height: 30%;
     width: 30%;
   }
@@ -141,7 +141,7 @@
     width: 100%;
     font-size: 1rem;
     margin: 0vh;
-    padding: 1vw;
+    padding: 1.2vw;
     text-align: start;
   }
   #intro-thank{
@@ -198,6 +198,7 @@
     margin-left: -1vw;
     background-color: #202226;
     box-shadow: 1vw -1vw 4vw 1vw #0b0d12;
+    text-align: start;
     z-index: 3;
   }
 
