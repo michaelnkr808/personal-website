@@ -84,10 +84,10 @@ hr{
 }
 #intro-img-wrapper *{
   justify-content: center;
-  border-radius: 3vw;
-  width: auto;
-  height: 50vh;
-  margin-top: -10px;
+  border-radius: 30%;
+  width: 65vw;
+  height: auto;
+  margin-top: 10px;
   margin-bottom: 10px;
   box-shadow: -1vw 1vw 5vw 1vw #0b0d12;
 }
