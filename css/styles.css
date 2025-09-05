@@ -77,8 +77,8 @@
   } 
 
   .next-button{
-    height: 30%;
-    width: 30%;
+    height: 3vh;
+    width: 3vw;
   }
 
   .header{
@@ -197,9 +197,16 @@
     margin-top: 25vh;
     margin-left: -1vw;
     background-color: #202226;
-    box-shadow: 1vw -1vw 4vw 1vw #0b0d12;
+    box-shadow: 1vw -1vw 3vw 1vw #0b0d12;
     text-align: start;
     z-index: 3;
+  }
+  #about-next-arrow-wrapper{
+    display: flex;
+    align-items: flex-end;
+    height: 12vh;
+    width: 10vw;
+    margin-left: 50%;
   }
 
   /* mobile styling */
@@ -233,9 +240,6 @@
         padding: 10px;
         box-sizing: border-box;
     }
-    #intro-thank{
-        font-size: 1rem;
-    }
     #intro-right{
         display: none;
     }
@@ -254,7 +258,7 @@
         max-width: 100%;
     }
     .card-text{
-        font-size: .8em;
+        font-size: 1.5vw;
         flex-shrink: 0;
         font-weight: 500;
     }
@@ -269,7 +273,7 @@
   }
 
   /* tablet styling */
-  @media (min-width: 768px) and (orientation: portrait){
+  @media (min-width: 768px), (orientation: portrait){
     /* Intro styling */
     #intro-card{
       height: auto;          
@@ -284,6 +288,6 @@
     }
     .card-text{
       line-height: 1.4;
-      font-size: 1.6vw;
+      font-size: 2vw;
     }
   }

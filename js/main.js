@@ -18,4 +18,4 @@ let nextBtn = document.getElementsByClassName("next-button")
 for(let element of nextBtn){
     element.addEventListener("click", scrollToNextSection)
 }
-    
+        
