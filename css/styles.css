@@ -134,6 +134,18 @@ hr{
 
 /* About Me Styling*/
 
+#about-me-card{
+    flex-shrink: 1;
+    color: white;
+    width: 100%;
+    height: auto;
+    border-radius: 3vw;
+    background-color: #202226;
+    box-shadow: -1vw 1vw 5vw 1vw #0b0d12;
+    min-height: 25vh;
+    min-width: 20vh;
+    z-index: 1;
+}
 
 
   /*refactoring (desktop stylings)...*/
