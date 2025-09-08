@@ -21,7 +21,7 @@
   }
   
   section{
-    height: 100vh;
+    height: 105vh;
     margin-top: 3vh;
     margin-right: 2vw;
     margin-left: 2vw;
@@ -98,6 +98,7 @@ hr{
 .next-arrow-wrapper{
   display: flex;
   justify-content: center;
+  margin-top: 2vh;
 }
 .next-button{
   width: 100%;
@@ -161,7 +162,7 @@ hr{
 #about-me-photo img{
   justify-content: center;
   border-radius: 30%;
-  width: 40vh;
+  width: 80vw;
   height: auto;
   margin-top: 4vh;
   margin-bottom: 10px;
@@ -170,11 +171,10 @@ hr{
 
 /* Projects Stylings */
 #projects{
-  margin-top: -1px;
+  margin-top: -4vh;
 }
 
 #projects-card{
-  margin-top: 10px;
   flex-shrink: 1;
   color: white;
   width: 100%;
@@ -212,13 +212,16 @@ hr{
 .carousel-track-container{
   height: 100%;
   width: 100%;
-  position: relative
+  position: relative;
+  overflow: hidden;
 }
 
 .carousel-track{
   padding: 0;
   margin: 0;
   list-style: none;
+  height: 100%;
+  transition: transform 250ms ease-in;
 }
 
 .carousel-slide{
@@ -238,11 +241,11 @@ hr{
 }
 
 .carousel-button--left{
-  left: -25px;
+  left: -12vw;
 }
 
 .carousel-button--right{
-  right: -25px;
+  right: -12vw;
 }
 
 .carousel-button img{
@@ -263,11 +266,14 @@ hr{
   height: 1vh;
   background: rgba(255,255,255,.1);
   margin: 0 3px;
+  cursor: pointer;
 }
 
 .carousel-indicator.current-slide{
   background-color: rgba(255,255,255,.8);
 }
+
+.is-hidden {display: none;}
 
   /*refactoring (desktop stylings)...*/
 
