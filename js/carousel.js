@@ -4,13 +4,27 @@ const nextButton = document.querySelector(".carousel-button--right");
 const prevButton = document.querySelector(".carousel-button--left");
 const navDots = document.querySelector(".carousel-nav");
 const dotsArr = Array.from(navDots.children);
-
 const slideWidth = slides[0].getBoundingClientRect().width;
+const projectText = document.querySelector(".project-text");
+
+const projDescriptions = {
+    "0" : "hello world",
+    "1" : "hello again",
+    "2" : "bye bye"
+}
+
+
+
+const updateText = function(projectText, slideIndex,){ 
+    projectText.textContent = `${projDescriptions[slideIndex]}`;
+}
 
 const setStylePosition = function(slide, index){
     slide.style.left = slideWidth * index + "px";
 };
 slides.forEach(setStylePosition);
+updateText(projectText, 0);
+
 
 const moveToSlide = function(track, currentSlide, targetSlide){
 
@@ -25,7 +39,7 @@ const updateDots = function(currentDot, targetDot){
 }
 
 const displayArrows = function(slides, prevButton, nextButton, targetIndex){
-    if (targetIndex === 0){
+    if(targetIndex === 0){
         prevButton.classList.add("is-hidden");
         nextButton.classList.remove('is-hidden');
     }else if(targetIndex === slides.length - 1){
@@ -49,6 +63,7 @@ prevButton.addEventListener('click', function(){
     moveToSlide(track, currentSlide, prevSlide)
     updateDots(currentDot, previoustDot)
     displayArrows(slides, prevButton, nextButton, slideIndex)
+    updateText(projectText, slideIndex)
 
 })
 
@@ -65,7 +80,7 @@ nextButton.addEventListener('click', function(){
     moveToSlide(track, currentSlide, nextSlide)
     updateDots(currentDot, nextDot)
     displayArrows(slides, prevButton, nextButton, slideIndex)
-
+    updateText(projectText, slideIndex)
 })
 
 navDots.addEventListener('click', function(e){
@@ -84,5 +99,5 @@ navDots.addEventListener('click', function(e){
     moveToSlide(track, currentSlide, targetSlide)
     updateDots(currentDot, targetDot)
     displayArrows(slides, prevButton, nextButton, targetIndex)
-
+    updateText(projectText, targetIndex)
 })
