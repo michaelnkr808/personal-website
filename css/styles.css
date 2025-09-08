@@ -105,6 +105,7 @@ hr{
   margin: 3vw;
   width: 3vh;
   height: 3vh;
+  cursor: pointer;
 }
 .header{
     flex-shrink: 0;
@@ -136,7 +137,7 @@ hr{
     background-color: #0a0d14;
   }
 
-/* About Me Styling*/
+/* About Me Styling */
 
 #about-me-card{
     flex-shrink: 1;
@@ -145,7 +146,7 @@ hr{
     height: auto;
     border-radius: 3vw;
     background-color: #202226;
-    box-shadow: -1vw 1vw 5vw 1vw #0b0d12;
+    box-shadow: -1vw 1vw 5vw 5vw #0b0d12;
     margin-top: -4vh;
     min-height: 25vh;
     min-width: 20vh;
@@ -160,13 +161,113 @@ hr{
 #about-me-photo img{
   justify-content: center;
   border-radius: 30%;
-  width: 50vh;
+  width: 40vh;
   height: auto;
-  margin-top: 10px;
+  margin-top: 4vh;
   margin-bottom: 10px;
   box-shadow: -1vw 1vw 5vw 1vw #0b0d12;
 }
 
+/* Projects Stylings */
+#projects{
+  margin-top: -1px;
+}
+
+#projects-card{
+  margin-top: 10px;
+  flex-shrink: 1;
+  color: white;
+  width: 100%;
+  height: auto;
+  border-radius: 3vw;
+  background-color: #202226;
+  box-shadow: -1vw 1vw 5vw 1vw #0b0d12;
+  margin-top: 4vh;
+  min-height: 25vh;
+  min-width: 20vh;
+  z-index: 1;
+}
+
+.carousel{
+  position: relative;
+  height: 70vh;
+  width: 70vw;
+  margin: 0 auto;
+  padding-top: 5vh;
+}
+
+.carousel-slide img{
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 5%;
+}
+
+.carousel-track img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-track-container{
+  height: 100%;
+  width: 100%;
+  position: relative
+}
+
+.carousel-track{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.carousel-slide{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.carousel-button{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.carousel-button--left{
+  left: -25px;
+}
+
+.carousel-button--right{
+  right: -25px;
+}
+
+.carousel-button img{
+  width: 4vh;
+  height: auto;
+}
+
+.carousel-nav{
+  display: flex;
+  justify-content: center;
+  padding: 5px 5px;
+}
+
+.carousel-indicator{
+  border: 0;
+  border-radius: 50%;
+  width: 2vw;
+  height: 1vh;
+  background: rgba(255,255,255,.1);
+  margin: 0 3px;
+}
+
+.carousel-indicator.current-slide{
+  background-color: rgba(255,255,255,.8);
+}
 
   /*refactoring (desktop stylings)...*/
 
