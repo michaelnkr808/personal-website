@@ -5,7 +5,9 @@
   }
   
 html {
+  width: 100vw;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -15,6 +17,7 @@ body {
   background-color: black;
   overflow-y: scroll;
   scrollbar-width: none;
+  overflow-x: hidden;
 }
 body::-webkit-scrollbar{
   display: none
@@ -347,7 +350,7 @@ hr{
   height: auto;
   border-radius: 3vw;
   background-color: #202226;
-  box-shadow: -1vw 1vw 8vw 2vw #0b0d12;
+  box-shadow: -1vw 1vw 10vw 2vw #0b0d12;
   min-height: 25vh;
   min-width: 20vh;
   z-index: 1;
