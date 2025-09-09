@@ -671,8 +671,8 @@ hr{
     }
     #introduction .next-arrow-wrapper{
       position: absolute;
-      top: 55vmin;
-      right: 40vmin;
+      top: 45vmin;
+      right: 60vmin;
     }
     .header{
       display: flex;
