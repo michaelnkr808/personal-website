@@ -335,7 +335,7 @@ hr{
 
 /* Tablet Stylings */
 
-@media (min-width: 601px) and (max-width: 1400px){
+@media (min-width: 601px) and (max-width: 1370px){
 #intro-content{
   display: flex;
   flex-direction: row;
@@ -512,7 +512,7 @@ hr{
 }
 
 /* Tablet Portrait Specific Stylings */
-@media (min-width: 601px) and (max-width: 1400px) and (orientation: portrait){
+@media (min-width: 601px) and (max-width: 1370px) and (orientation: portrait){
   #introduction .next-arrow-wrapper{
     position: absolute;
     top: 80vmin;
@@ -627,155 +627,231 @@ hr{
   }
 }
 
+  /* Desktop Stylings */
 
-
-
-
-
-  /*refactoring (desktop stylings)...*/
-
-  @media (min-width: 99999px){
-      /* Intro Styling */
-  hr{
-    margin: 1.3vh;
-  }
-
-  #intro-next-arrow-wrapper{
-    display: flex;
-    align-items: flex-end;
-    height: 12vh;
-    width: 10vw;
-    margin-left: 50%;
-    z-index: 3;
-  } 
-
-  .next-button{
-    height: 3vh;
-    width: 3vw;
-  }
-
-  .header{
-    display: flex;
-    flex-shrink: 0;
-    padding-left: 3.5vw;
-    border-radius: 3vw 3vw 0 0;
-    align-items: center;
-    background-color: #0a0d14;
-    height: 8vh;
-    font-size: 1rem;
-    font-weight: 500;
-    white-space: nowrap;
-  }
-
-  .word-emphasis{
-    color: #4973e3;
-    padding-right: .5vw;
-    font-weight: 900;
-
-  }
-  
-  #intro-icon img{
+  @media (min-width: 1371px){
+    #intro-content{
+      display: flex;
+      flex-direction: row;
+      flex: 1;
+      position: relative;
+      margin-top: 10vmin;
+    }
+    #intro-card{
+      position: absolute;
+      top: 50%;
+      right: 12%;
+      flex-shrink: 1;
+      color: white;
+      width: 50%;
+      height: auto;
+      border-radius: 3vw;
+      background-color: #202226;
+      box-shadow: -1vw 1vw 10vw 2vw #0b0d12;
+      min-height: 25vh;
+      min-width: 20vh;
+      z-index: 1;
+    }
+    #intro-img-wrapper{
+      position: absolute;
+      left: 12%;
+      width: 60vmin;
+      height: auto;
+      display: flex;
+      justify-content: center;
+    }
+    #intro-img-wrapper img{
+      justify-content: center;
+      border-radius: 30%;
+      width: 100%;
+      height: 100%;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      box-shadow: -1vw 1vw 5vw 1vw #0b0d12;
+    }
+    #introduction .next-arrow-wrapper{
+      position: absolute;
+      top: 55vmin;
+      right: 40vmin;
+    }
+    .header{
+      display: flex;
+      flex-shrink: 0;
+      border-radius: 3vw 3vw 0 0;
+      align-items: center;
+      background-color: #0a0d14;
+      padding: 3vh;
+      height: 4vmin;
+      font-size: 2vmin;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+    .card-text{
+      padding: 2vw;
+      font-size: 2svh;
+      flex-shrink: 0;
+      font-weight: 500;
+    }
     
-    justify-self: flex-end;
-    height: 4vh;
-    width: 4vw;
-    background-color: #0a0d14;
-  }
-
-  #intro-card{
-    display: flex;
-    flex-direction: column;
-    flex-shrink: 1;
-    color: white;
-    height: 49vh;
-    width: 50vw;
-    margin-left: 2vw;
-    margin-right: -2vw;
-    border-radius: 3vw;
-    background-color: #202226;
-    margin-top: 20vh;
-    box-shadow: -1vw 1vw 2vw 1vw #0b0d12;
-    min-height: 20vh;
-    min-width: 50vw;
-    z-index: 1;
-  }  
-
-  .card-text{
-    display: flex;
-    flex-shrink: 0;
-    flex-direction: column;
-    height: 100%;
-    width: 100%;
-    font-size: 1rem;
-    margin: 0vh;
-    padding: 1.2vw;
-    text-align: start;
-  }
-  #intro-thank{
-    font-size: 1.5em;
-    font-weight: 500;
-    align-self: center;
-  }
-  #intro-img-wrapper{
-    display: flex;
-    flex: 1;
-    position: relative;
-    width: 70%;
-    height: auto;
-    align-items: center;
-    right: 10%;
-    max-width: 100%;
-  } 
-  #intro-img-wrapper img{
-    margin-top: 5vh;
-    border-radius: 5vw;
-    max-width: 100%;
-    width: 100%;
-    height: auto;
-    box-shadow: -5px 5px 20px 20px #0b0d12;
-  }
-
-  /* About me stylings */
-
-  #about-content{
-    display: flex;
-  }
-
-  
-  #about-me-photo{  
-    border-radius: 20%;
-    margin-top: 3vh;
-    height: 100%;
-    width: 100%;
-    flex-basis: 0;
-    height: auto;
-    margin-left: 6vw;
-    width: 25%;
-    box-shadow: -5px 5px 20px 20px #0b0d12;
-  }
-  #about-me-card{
-    display: flex;
-    flex-direction: column;
-    flex-shrink: 1;
-    color: white;
-    width: 50vw;
-    height: 50vh;
-    border-radius: 3vw;
-    margin-top: 25vh;
-    margin-left: -1vw;
-    background-color: #202226;
-    box-shadow: 1vw -1vw 3vw 1vw #0b0d12;
-    text-align: start;
-    z-index: 3;
-  }
-  #about-next-arrow-wrapper{
-    display: flex;
-    align-items: flex-end;
-    height: 12vh;
-    width: 10vw;
-    margin-left: 50%;
-  }
-
-
-
+    /* About Me Stylings */
+    #about-me{
+      height: 100vh;
+    }
+    
+    #about-content{
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      margin-top: 4vh;
+    }
+    
+    #about-me-card{
+      position: relative;
+      left: 3%;
+      top: 20vmin;
+      flex-shrink: 1;
+      color: white;
+      width: 45%;
+      height: auto;
+      border-radius: 3vw;
+      background-color: #202226;
+      box-shadow: -1vw 1vw 5vw 2vw #0b0d12;
+      margin-top: -4vh;
+      min-height: 25vh;
+      min-width: 20vh;
+      z-index: 1;
+    }
+    
+    #about-me-photo{
+      position: relative;
+      width: 70vmin;
+      height: auto;
+      right: -45%;
+      bottom: 40%;
+    }
+    
+    #about-me-photo img{
+      justify-content: center;
+      border-radius: 30%;
+      width: 100%;
+      height: 100%;
+      margin-top: 4vh;
+      margin-bottom: 10px;
+      box-shadow: -1vw 1vw 5vw 1vw #0b0d12;
+    }
+    
+    #about-me .next-arrow-wrapper{
+      position: absolute;
+      top: 60vmin;
+      left: 50vmin;
+    }
+    
+    /* Projects Stylings */
+    #projects{
+      position: relative;
+      top: 0px;
+      height: 130vh;
+    }
+    
+    #projects-card{  
+      flex-shrink: 1;
+      margin: 4vh auto 0; 
+      color: white;
+      width: 80%;
+      height: auto;
+      border-radius: 3vw;
+      background-color: #202226;
+      box-shadow: -1vw 1vw 5vw 1vw #0b0d12;
+      min-height: 25vh;
+      min-width: 20vh;
+      z-index: 1;
+    }
+    
+    .carousel-indicator{
+      border: 0;
+      border-radius: 50%;
+      width: .9vmin;
+      height: 1vmin;
+      margin-top: 0;
+      background: rgba(255,255,255,.1);
+      margin: 0 3px;
+      cursor: pointer;
+    }
+    .carousel-nav{
+      display: flex;
+      justify-content: center;
+      padding: 5px 5px;
+    }
+    
+    .carousel-button--left{
+      left: -5vw;
+      transform: translateX(-50%);
+    }
+    
+    .carousel-button--right{
+      right: -5vw;
+      transform: translateX(50%);
+    }
+    
+    /* Contact Stylings */
+    #contact{
+      height: 32vmin;
+    }
+    #contact-list{
+      padding-top: 3vmin;
+    }
+    #contact-header{
+      font-size: 1.5em;
+    }
+    }
+    
+    /* Tablet Portrait Specific Stylings */
+    @media (min-width: 601px) and (max-width: 1370px) and (orientation: portrait){
+      #introduction .next-arrow-wrapper{
+        position: absolute;
+        top: 80vmin;
+        right: 70vmin;
+      }
+      #about-me .next-arrow-wrapper{
+        position: absolute;
+        top: 100vmin;
+        left: 46vmin;
+        z-index: 3;
+      }
+      #about-me-card{
+        position: relative;
+        left: 0;
+        top: 2vmin;
+        flex-shrink: 1;
+        color: white;
+        width: 100%;
+        height: auto;
+        border-radius: 3vw;
+        background-color: #202226;
+        box-shadow: -1vw 1vw 5vw 2vw #0b0d12;
+        margin-top: -4vh;
+        min-height: 25vh;
+        min-width: 20vh;
+        z-index: 1;
+      }
+      #about-me-photo{
+        position: relative;
+        width: 60vmin;
+        height: auto;
+        left: 20vmin;
+        bottom: 3%;
+      }
+      
+      #about-me-photo img{
+        justify-content: center;
+        border-radius: 30%;
+        width: 100%;
+        height: 100%;
+        margin-top: 4vh;
+        margin-bottom: 10px;
+        box-shadow: -1vw 1vw 5vw 1vw #0b0d12;
+      }
+      #contact{
+        height: 25vmin;
+      }
   }
