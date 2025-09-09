@@ -58,6 +58,7 @@ hr{
 #introduction{
   border-radius: 3vw 3vw 0 0;
   margin-top: 4vh;
+  height: 105vh;
 }
 
 .header{
@@ -508,7 +509,6 @@ hr{
 #contact-header{
   font-size: 1.5em;
 }
-
 }
 
 /* Tablet Portrait Specific Stylings */
@@ -559,6 +559,71 @@ hr{
   }
   #contact{
     height: 25vmin;
+  }
+  
+}
+
+/* Landscape Mobile Sytlings */
+@media (orientation: landscape) and (max-height: 480px) {
+  #intro-img-wrapper{
+    position: absolute;
+    left: 15%;
+    width: 60vmin;
+    height: auto;
+    display: flex;
+    justify-content: center;
+  }
+  #introduction .next-arrow-wrapper{
+    position: absolute;
+    top: 40vmin;
+    left: 100vmin;
+  }
+  #intro-card{
+    position: absolute;
+    top: 70%;
+    right: 13%;
+    flex-shrink: 1;
+    color: white;
+    width: 50%;
+    height: auto;
+    border-radius: 3vw;
+    background-color: #202226;
+    box-shadow: -1vw 1vw 10vw 2vw #0b0d12;
+    min-height: 25vh;
+    min-width: 20vh;
+    z-index: 1;
+  }
+  #about-me-photo{
+    position: relative;
+    width: 70vmin;
+    height: auto;
+    right: -55%;
+    bottom: 40%;
+  }
+  #about-me-card{
+    position: relative;
+    left: 15%;
+    top: 10vmin;
+    flex-shrink: 1;
+    color: white;
+    width: 45%;
+    height: auto;
+    border-radius: 3vw;
+    background-color: #202226;
+    box-shadow: -1vw 1vw 5vw 2vw #0b0d12;
+    margin-top: -4vh;
+    min-height: 25vh;
+    min-width: 20vh;
+    z-index: 1;
+  }
+  #about-me .next-arrow-wrapper{
+    position: absolute;
+    top: 45vmin;
+    left: 70vmin;
+    z-index: 3;
+  }
+  #contact-header{
+    font-size: 1em;
   }
 }
 
