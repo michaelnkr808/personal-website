@@ -377,8 +377,7 @@ hr{
 #introduction .next-arrow-wrapper{
   position: absolute;
   top: 55vmin;
-  right: 25vmin;
-  z-index: 8;
+  right: 40vmin;
 }
 .header{
   display: flex;
@@ -394,7 +393,7 @@ hr{
 }
 .card-text{
   padding: 2vw;
-  font-size: 1em;
+  font-size: 2svh;
   flex-shrink: 0;
   font-weight: 500;
 }
@@ -417,7 +416,7 @@ hr{
   top: 10vmin;
   flex-shrink: 1;
   color: white;
-  width: 50%;
+  width: 45%;
   height: auto;
   border-radius: 3vw;
   background-color: #202226;
@@ -430,15 +429,17 @@ hr{
 
 #about-me-photo{
   position: relative;
-  left: 0%;
-  bottom: 10%;
+  width: 70vmin;
+  height: auto;
+  right: -45%;
+  bottom: 40%;
 }
 
 #about-me-photo img{
   justify-content: center;
   border-radius: 30%;
-  width: 60vmin;
-  height: auto;
+  width: 100%;
+  height: 100%;
   margin-top: 4vh;
   margin-bottom: 10px;
   box-shadow: -1vw 1vw 5vw 1vw #0b0d12;
@@ -447,15 +448,14 @@ hr{
 #about-me .next-arrow-wrapper{
   position: absolute;
   top: 60vmin;
-  left: 15vmin;
-  z-index: 3;
+  left: 50vmin;
 }
 
 /* Projects Stylings */
 #projects{
   position: relative;
   top: 0px;
-  height: 12 0vh;
+  height: 130vh;
 }
 
 #projects-card{  
@@ -475,8 +475,8 @@ hr{
 .carousel-indicator{
   border: 0;
   border-radius: 50%;
-  width: 1.7vmin;
-  height: 2vmin;
+  width: .9vmin;
+  height: 1vmin;
   margin-top: 0;
   background: rgba(255,255,255,.1);
   margin: 0 3px;
@@ -500,9 +500,66 @@ hr{
 
 /* Contact Stylings */
 #contact{
-  height: 16vh;
+  height: 32vmin;
+}
+#contact-list{
+  padding-top: 3vmin;
+}
+#contact-header{
+  font-size: 1.5em;
 }
 
+}
+
+/* Tablet Portrait Specific Stylings */
+@media (min-width: 601px) and (max-width: 1400px) and (orientation: portrait){
+  #introduction .next-arrow-wrapper{
+    position: absolute;
+    top: 80vmin;
+    right: 70vmin;
+  }
+  #about-me .next-arrow-wrapper{
+    position: absolute;
+    top: 100vmin;
+    left: 46vmin;
+    z-index: 3;
+  }
+  #about-me-card{
+    position: relative;
+    left: 0;
+    top: 2vmin;
+    flex-shrink: 1;
+    color: white;
+    width: 100%;
+    height: auto;
+    border-radius: 3vw;
+    background-color: #202226;
+    box-shadow: -1vw 1vw 5vw 2vw #0b0d12;
+    margin-top: -4vh;
+    min-height: 25vh;
+    min-width: 20vh;
+    z-index: 1;
+  }
+  #about-me-photo{
+    position: relative;
+    width: 60vmin;
+    height: auto;
+    left: 20vmin;
+    bottom: 3%;
+  }
+  
+  #about-me-photo img{
+    justify-content: center;
+    border-radius: 30%;
+    width: 100%;
+    height: 100%;
+    margin-top: 4vh;
+    margin-bottom: 10px;
+    box-shadow: -1vw 1vw 5vw 1vw #0b0d12;
+  }
+  #contact{
+    height: 25vmin;
+  }
 }
 
 
