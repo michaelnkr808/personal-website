@@ -7,16 +7,29 @@ const dotsArr = Array.from(navDots.children);
 const slideWidth = slides[0].getBoundingClientRect().width;
 const projectText = document.querySelector(".project-text");
 
-const projDescriptions = {
-    "0" : "hello world",
-    "1" : "hello again",
-    "2" : "bye bye"
-}
+const projDescriptions = [
+  {
+    title: "Python Remote Access Tool",
+    body: `Developed a lightweight client–server application in Python to explore network programming and socket-based communication. 
+
+    - Implemented socket programming for persistent connections between server and clients.
+    - Built a command-line interface to manage client sessions
+    - Designed basic functionality for file transfer and remote command execution.
+
+    This project deepened my understanding of network security concepts, client–server architecture, and Python’s standard library for networking.`
+  },
+  {
+    title: "Project 2",
+    body: `Details coming soon.`
+  }
+];
 
 
 
 const updateText = function(projectText, slideIndex,){ 
-    projectText.textContent = `${projDescriptions[slideIndex]}`;
+    const item = projDescriptions[slideIndex] || { title: "", body: ""};
+    projectText.dataset.title = item.title || "";
+    projectText.textContent = item.body || "";
 }
 
 const setStylePosition = function(slide, index){

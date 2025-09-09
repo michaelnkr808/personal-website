@@ -171,6 +171,7 @@ hr{
 
 /* Projects Stylings */
 #projects{
+  height: 115vh;
   margin-top: -4vh;
 }
 
@@ -193,7 +194,7 @@ hr{
   height: 70vh;
   width: 70vw;
   margin: 0 auto;
-  padding-top: 5vh;
+  padding-top: 3vh;
 }
 
 .carousel-slide img{
@@ -297,6 +298,18 @@ hr{
 #contact-list img{
   width: 8vw;
   height: 8vh;
+}
+
+.project-text::before{
+  content: attr(data-title);
+  display: block;
+  font-weight: 700;
+  color: #4973e3;
+  margin-bottom: 0.5em
+}
+.project-text{
+  white-space: pre-line;
+  font-size: .09em;
 }
 
   /*refactoring (desktop stylings)...*/
