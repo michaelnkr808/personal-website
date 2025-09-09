@@ -39,22 +39,24 @@ a{
 
 hr{
     margin: 1vh;
-  }
+}
 #intro-content{
   display: flex;
   flex-direction: column;
 }
-#intro-left{
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-  }
+
 #topbar{
     flex: 1;
     height: 4vh;
+    border-radius: 3vw 3vw 0 0;
     background-color: #0a0d14;
     color: #0a0d14;
 }
+
+#introduction{
+  border-radius: 3vw 3vw 0 0;
+}
+
 .header{
     display: flex;
     flex-shrink: 0;
@@ -95,9 +97,6 @@ hr{
   margin-top: 10px;
   margin-bottom: 10px;
   box-shadow: -1vw 1vw 5vw 1vw #0b0d12;
-}
-#me-photo{
-    display: none;
 }
 .next-arrow-wrapper{
   display: flex;
@@ -326,45 +325,83 @@ hr{
   font-size: .09em;
 }
 
+@media (min-width: 601px) and (max-width: 1366px){
+#intro-content{
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  position: relative;
+  margin-top: 10vmin;
+}
+#intro-card{
+  position: absolute;
+  top: 40%;
+  right: 2%;
+  flex-shrink: 1;
+  color: white;
+  width: 60%;
+  height: auto;
+  border-radius: 3vw;
+  background-color: #202226;
+  box-shadow: -1vw 1vw 5vw 1vw #0b0d12;
+  min-height: 25vh;
+  min-width: 20vh;
+  z-index: 1;
+}
+#intro-img-wrapper{
+  position: absolute;
+  left: 5%;
+  width: 60vmin;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+#intro-img-wrapper img{
+  justify-content: center;
+  border-radius: 30%;
+  width: 100%;
+  height: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  box-shadow: -1vw 1vw 5vw 1vw #0b0d12;
+}
+.next-arrow--intro{
+  position: absolute;
+  top: 50vmin;
+  right: 25vmin;
+  z-index: 8;
+}
+.header{
+  display: flex;
+  flex-shrink: 0;
+  border-radius: 3vw 3vw 0 0;
+  align-items: center;
+  background-color: #0a0d14;
+  padding: 3vh;
+  height: 4vmin;
+  font-size: 2vmin;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.card-text{
+  padding: 1vw;
+  font-size: 1em;
+  flex-shrink: 0;
+  font-weight: 500;
+}
+}
+
+
+
+
+
+
   /*refactoring (desktop stylings)...*/
 
-  @media (min-width: 1024px){
+  @media (min-width: 99999px){
       /* Intro Styling */
   hr{
     margin: 1.3vh;
-  }
-
-  #introduction{
-    background-color: #0f121a;
-    border-radius: 3vw 3vw 0 0;
-  }
-
-  #intro-content{
-    display: flex;
-    flex-direction: row;
-    flex: 1;
-    position: relative;
-  }
-  #intro-left{
-    display: flex;
-    flex: 0 0 auto;
-    flex-direction: column;
-  }
-  #intro-right{
-    display: flex;
-    flex: 1;
-  }
-
-  #intro-left, #intro-right, #intro-card, intro-text{
-    min-width: 0;
-  }
-
-  #topbar{
-    flex: 1;
-    height: 4vh;
-    border-radius: 3vw 3vw 0 0;
-    background-color: #0a0d14;
-    color: #0a0d14;
   }
 
   #intro-next-arrow-wrapper{
@@ -453,8 +490,8 @@ hr{
     display: flex;
     flex: 1;
     position: relative;
-    height: 100%;
-    width: 100%;
+    width: 70%;
+    height: auto;
     align-items: center;
     right: 10%;
     max-width: 100%;
