@@ -5,9 +5,8 @@
   }
   
 html {
-  width: 100vw;
   scroll-behavior: smooth;
-  overflow-x: hidden;
+  width: auto;
 }
 
 body {
@@ -17,14 +16,16 @@ body {
   background-color: black;
   overflow-y: scroll;
   scrollbar-width: none;
-  overflow-x: hidden;
+  overflow-x: visible;
+  position: static;
 }
 body::-webkit-scrollbar{
   display: none
 }
 
 section{
-    height: 100vh;
+    height: 100svh;
+    width: 100%;
     margin-top: 0;
     margin-right: 0;
     margin-left: 0;
@@ -163,6 +164,7 @@ hr{
 #about-me-photo{
   display: flex;
   justify-content: center;
+  width: 100vw;
 }
 
 #about-me-photo img{
@@ -428,7 +430,7 @@ hr{
 
 #about-me-photo{
   position: relative;
-  left: 10%;
+  left: 0%;
   bottom: 10%;
 }
 
@@ -487,18 +489,18 @@ hr{
 }
 
 .carousel-button--left{
-  left: -3vw;
+  left: -5vw;
   transform: translateX(-50%);
 }
 
 .carousel-button--right{
-  right: -3vw;
+  right: -5vw;
   transform: translateX(50%);
 }
 
 /* Contact Stylings */
 #contact{
-  height: 20vh;
+  height: 16vh;
 }
 
 }
