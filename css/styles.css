@@ -22,7 +22,7 @@ body::-webkit-scrollbar{
 
 section{
     height: 105vh;
-    margin-top: 3vh;
+    margin-top: 0;
     margin-right: 2vw;
     margin-left: 2vw;
     margin-bottom:-2vh;
@@ -55,6 +55,7 @@ hr{
 
 #introduction{
   border-radius: 3vw 3vw 0 0;
+  margin-top: 4vh;
 }
 
 .header{
@@ -292,6 +293,7 @@ hr{
 /* Contact Styling */
 #contact{
   height: 15vh;
+  margin-top: 3vh;
 }
 
 #contact-header{
@@ -325,7 +327,7 @@ hr{
   font-size: .09em;
 }
 
-@media (min-width: 601px) and (max-width: 1366px){
+@media (min-width: 601px) and (max-width: 1400px){
 #intro-content{
   display: flex;
   flex-direction: row;
@@ -336,14 +338,14 @@ hr{
 #intro-card{
   position: absolute;
   top: 40%;
-  right: 2%;
+  right: 10%;
   flex-shrink: 1;
   color: white;
-  width: 60%;
+  width: 50%;
   height: auto;
   border-radius: 3vw;
   background-color: #202226;
-  box-shadow: -1vw 1vw 5vw 1vw #0b0d12;
+  box-shadow: -1vw 1vw 8vw 2vw #0b0d12;
   min-height: 25vh;
   min-width: 20vh;
   z-index: 1;
@@ -365,9 +367,9 @@ hr{
   margin-bottom: 10px;
   box-shadow: -1vw 1vw 5vw 1vw #0b0d12;
 }
-.next-arrow--intro{
+#introduction .next-arrow-wrapper{
   position: absolute;
-  top: 50vmin;
+  top: 55vmin;
   right: 25vmin;
   z-index: 8;
 }
@@ -384,11 +386,56 @@ hr{
   white-space: nowrap;
 }
 .card-text{
-  padding: 1vw;
+  padding: 2vw;
   font-size: 1em;
   flex-shrink: 0;
   font-weight: 500;
 }
+
+/* About Me Stylings */
+#about-me{
+  height: 105vh;
+}
+
+#about-me-card{
+  position: absolute;
+  left: 3%;
+  top: 130vmin;
+  flex-shrink: 1;
+  color: white;
+  width: 50%;
+  height: auto;
+  border-radius: 3vw;
+  background-color: #202226;
+  box-shadow: -1vw 1vw 5vw 2vw #0b0d12;
+  margin-top: -4vh;
+  min-height: 25vh;
+  min-width: 20vh;
+  z-index: 1;
+}
+
+#about-me-photo{
+  position: absolute;
+  right: 2%;
+}
+
+#about-me-photo img{
+  justify-content: center;
+  border-radius: 30%;
+  width: 70vmin;
+  height: auto;
+  margin-top: 4vh;
+  margin-bottom: 10px;
+  box-shadow: -1vw 1vw 5vw 1vw #0b0d12;
+}
+
+#about-me .next-arrow-wrapper{
+  position: absolute;
+  top: 175vmin;
+  left: 15vmin;
+  z-index: 3;
+}
+
 }
 
 
