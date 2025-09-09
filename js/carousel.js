@@ -16,7 +16,8 @@ const projDescriptions = [
     - Built a command-line interface to manage client sessions
     - Designed basic functionality for file transfer and remote command execution.
 
-    This project deepened my understanding of network security concepts, client–server architecture, and Python’s standard library for networking.`
+    This project deepened my understanding of network security concepts, client–server architecture, and Python’s standard library for networking.
+    (Click the image to learn more)`
   },
   {
     title: "Project 2",
