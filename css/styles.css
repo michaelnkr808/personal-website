@@ -130,7 +130,7 @@ hr{
     box-sizing: border-box;
 }
 .card-text{
-    padding: 2vw;
+    padding: 1.2vw;
     font-size: .6em;
     flex-shrink: 0;
     font-weight: 500;
@@ -393,7 +393,7 @@ hr{
   white-space: nowrap;
 }
 .card-text{
-  padding: 2vw;
+  padding: 1.2vw;
   font-size: 2svh;
   flex-shrink: 0;
   font-weight: 500;
@@ -627,231 +627,231 @@ hr{
   }
 }
 
-  /* Desktop Stylings */
+/* Desktop Stylings */
 
-  @media (min-width: 1371px){
-    #intro-content{
-      display: flex;
-      flex-direction: row;
-      flex: 1;
-      position: relative;
-      margin-top: 10vmin;
-    }
-    #intro-card{
-      position: absolute;
-      top: 50%;
-      right: 12%;
-      flex-shrink: 1;
-      color: white;
-      width: 50%;
-      height: auto;
-      border-radius: 3vw;
-      background-color: #202226;
-      box-shadow: -1vw 1vw 10vw 2vw #0b0d12;
-      min-height: 25vh;
-      min-width: 20vh;
-      z-index: 1;
-    }
-    #intro-img-wrapper{
-      position: absolute;
-      left: 12%;
-      width: 60vmin;
-      height: auto;
-      display: flex;
-      justify-content: center;
-    }
-    #intro-img-wrapper img{
-      justify-content: center;
-      border-radius: 30%;
-      width: 100%;
-      height: 100%;
-      margin-top: 10px;
-      margin-bottom: 10px;
-      box-shadow: -1vw 1vw 5vw 1vw #0b0d12;
-    }
-    #introduction .next-arrow-wrapper{
-      position: absolute;
-      top: 45vmin;
-      right: 60vmin;
-    }
-    .header{
-      display: flex;
-      flex-shrink: 0;
-      border-radius: 3vw 3vw 0 0;
-      align-items: center;
-      background-color: #0a0d14;
-      padding: 3vh;
-      height: 4vmin;
-      font-size: 2vmin;
-      font-weight: 500;
-      white-space: nowrap;
-    }
-    .card-text{
-      padding: 2vw;
-      font-size: 2svh;
-      flex-shrink: 0;
-      font-weight: 500;
-    }
-    
-    /* About Me Stylings */
-    #about-me{
-      height: 100vh;
-    }
-    
-    #about-content{
-      position: absolute;
-      height: 100%;
-      width: 100%;
-      margin-top: 4vh;
-    }
-    
-    #about-me-card{
-      position: relative;
-      left: 3%;
-      top: 20vmin;
-      flex-shrink: 1;
-      color: white;
-      width: 45%;
-      height: auto;
-      border-radius: 3vw;
-      background-color: #202226;
-      box-shadow: -1vw 1vw 5vw 2vw #0b0d12;
-      margin-top: -4vh;
-      min-height: 25vh;
-      min-width: 20vh;
-      z-index: 1;
-    }
-    
-    #about-me-photo{
-      position: relative;
-      width: 70vmin;
-      height: auto;
-      right: -45%;
-      bottom: 40%;
-    }
-    
-    #about-me-photo img{
-      justify-content: center;
-      border-radius: 30%;
-      width: 100%;
-      height: 100%;
-      margin-top: 4vh;
-      margin-bottom: 10px;
-      box-shadow: -1vw 1vw 5vw 1vw #0b0d12;
-    }
-    
-    #about-me .next-arrow-wrapper{
-      position: absolute;
-      top: 60vmin;
-      left: 50vmin;
-    }
-    
-    /* Projects Stylings */
-    #projects{
-      position: relative;
-      top: 0px;
-      height: 130vh;
-    }
-    
-    #projects-card{  
-      flex-shrink: 1;
-      margin: 4vh auto 0; 
-      color: white;
-      width: 80%;
-      height: auto;
-      border-radius: 3vw;
-      background-color: #202226;
-      box-shadow: -1vw 1vw 5vw 1vw #0b0d12;
-      min-height: 25vh;
-      min-width: 20vh;
-      z-index: 1;
-    }
-    
-    .carousel-indicator{
-      border: 0;
-      border-radius: 50%;
-      width: .9vmin;
-      height: 1vmin;
-      margin-top: 0;
-      background: rgba(255,255,255,.1);
-      margin: 0 3px;
-      cursor: pointer;
-    }
-    .carousel-nav{
-      display: flex;
-      justify-content: center;
-      padding: 5px 5px;
-    }
-    
-    .carousel-button--left{
-      left: -5vw;
-      transform: translateX(-50%);
-    }
-    
-    .carousel-button--right{
-      right: -5vw;
-      transform: translateX(50%);
-    }
-    
-    /* Contact Stylings */
-    #contact{
-      height: 32vmin;
-    }
-    #contact-list{
-      padding-top: 3vmin;
-    }
-    #contact-header{
-      font-size: 1.5em;
-    }
-    }
-    
-    /* Tablet Portrait Specific Stylings */
-    @media (min-width: 601px) and (max-width: 1370px) and (orientation: portrait){
-      #introduction .next-arrow-wrapper{
-        position: absolute;
-        top: 80vmin;
-        right: 70vmin;
-      }
-      #about-me .next-arrow-wrapper{
-        position: absolute;
-        top: 100vmin;
-        left: 46vmin;
-        z-index: 3;
-      }
-      #about-me-card{
-        position: relative;
-        left: 0;
-        top: 2vmin;
-        flex-shrink: 1;
-        color: white;
-        width: 100%;
-        height: auto;
-        border-radius: 3vw;
-        background-color: #202226;
-        box-shadow: -1vw 1vw 5vw 2vw #0b0d12;
-        margin-top: -4vh;
-        min-height: 25vh;
-        min-width: 20vh;
-        z-index: 1;
-      }
-      #about-me-photo{
-        position: relative;
-        width: 60vmin;
-        height: auto;
-        left: 20vmin;
-        bottom: 3%;
-      }
-      
-      #about-me-photo img{
-        justify-content: center;
-        border-radius: 30%;
-        width: 100%;
-        height: 100%;
-        margin-top: 4vh;
-        margin-bottom: 10px;
-        box-shadow: -1vw 1vw 5vw 1vw #0b0d12;
-      }
-      #contact{
-        height: 25vmin;
-      }
+@media (min-width: 1371px){
+  #intro-content{
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    position: relative;
+    margin-top: 10vmin;
   }
+  #intro-card{
+    position: absolute;
+    top: 50%;
+    right: 12%;
+    flex-shrink: 1;
+    color: white;
+    width: 50%;
+    height: auto;
+    border-radius: 3vw;
+    background-color: #202226;
+    box-shadow: -1vw 1vw 10vw 2vw #0b0d12;
+    min-height: 25vh;
+    min-width: 20vh;
+    z-index: 1;
+  }
+  #intro-img-wrapper{
+    position: absolute;
+    left: 12%;
+    width: 60vmin;
+    height: auto;
+    display: flex;
+    justify-content: center;
+  }
+  #intro-img-wrapper img{
+    justify-content: center;
+    border-radius: 30%;
+    width: 100%;
+    height: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-shadow: -1vw 1vw 5vw 1vw #0b0d12;
+  }
+  #introduction .next-arrow-wrapper{
+    position: absolute;
+    top: 45vmin;
+    right: 60vmin;
+  }
+  .header{
+    display: flex;
+    flex-shrink: 0;
+    border-radius: 3vw 3vw 0 0;
+    align-items: center;
+    background-color: #0a0d14;
+    padding: 3vh;
+    height: 4vmin;
+    font-size: 2vmin;
+    font-weight: 500;
+    white-space: nowrap;
+  }
+  .card-text{
+    padding: 1.2vw;
+    font-size: 2svh;
+    flex-shrink: 0;
+    font-weight: 500;
+  }
+  
+  /* About Me Stylings */
+  #about-me{
+    height: 100vh;
+  }
+  
+  #about-content{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    margin-top: 4vh;
+  }
+  
+  #about-me-card{
+    position: relative;
+    left: 15%;
+    top: 20vmin;
+    flex-shrink: 1;
+    color: white;
+    width: 45%;
+    height: auto;
+    border-radius: 3vw;
+    background-color: #202226;
+    box-shadow: -1vw 1vw 5vw 2vw #0b0d12;
+    margin-top: -4vh;
+    min-height: 25vh;
+    min-width: 20vh;
+    z-index: 1;
+  }
+  
+  #about-me-photo{
+    position: relative;
+    width: 70vmin;
+    height: auto;
+    right: -55%;
+    bottom: 40%;
+  }
+  
+  #about-me-photo img{
+    justify-content: center;
+    border-radius: 30%;
+    width: 100%;
+    height: 100%;
+    margin-top: 4vh;
+    margin-bottom: 10px;
+    box-shadow: -1vw 1vw 5vw 1vw #0b0d12;
+  }
+  
+  #about-me .next-arrow-wrapper{
+    position: absolute;
+    top: 50vmin;
+    left: 50vmin;
+  }
+  
+  /* Projects Stylings */
+  #projects{
+    position: relative;
+    top: 0px;
+    height: 130vh;
+  }
+  
+  #projects-card{  
+    flex-shrink: 1;
+    margin: 4vh auto 0; 
+    color: white;
+    width: 80%;
+    height: auto;
+    border-radius: 3vw;
+    background-color: #202226;
+    box-shadow: -1vw 1vw 5vw 1vw #0b0d12;
+    min-height: 25vh;
+    min-width: 20vh;
+    z-index: 1;
+  }
+  
+  .carousel-indicator{
+    border: 0;
+    border-radius: 50%;
+    width: .9vmin;
+    height: 1vmin;
+    margin-top: 0;
+    background: rgba(255,255,255,.1);
+    margin: 0 3px;
+    cursor: pointer;
+  }
+  .carousel-nav{
+    display: flex;
+    justify-content: center;
+    padding: 5px 5px;
+  }
+  
+  .carousel-button--left{
+    left: -5vw;
+    transform: translateX(-50%);
+  }
+  
+  .carousel-button--right{
+    right: -5vw;
+    transform: translateX(50%);
+  }
+  
+  /* Contact Stylings */
+  #contact{
+    height: 25vmin;
+  }
+  #contact-list{
+    padding-top: 3vmin;
+  }
+  #contact-header{
+    font-size: 1.5em;
+  }
+}
+    
+/* Tablet Portrait Specific Stylings */
+@media (min-width: 601px) and (max-width: 1370px) and (orientation: portrait){
+  #introduction .next-arrow-wrapper{
+    position: absolute;
+    top: 80vmin;
+    right: 70vmin;
+  }
+  #about-me .next-arrow-wrapper{
+    position: absolute;
+    top: 100vmin;
+    left: 46vmin;
+    z-index: 3;
+  }
+  #about-me-card{
+    position: relative;
+    left: 0;
+    top: 2vmin;
+    flex-shrink: 1;
+    color: white;
+    width: 100%;
+    height: auto;
+    border-radius: 3vw;
+    background-color: #202226;
+    box-shadow: -1vw 1vw 5vw 2vw #0b0d12;
+    margin-top: -4vh;
+    min-height: 25vh;
+    min-width: 20vh;
+    z-index: 1;
+  }
+  #about-me-photo{
+    position: relative;
+    width: 60vmin;
+    height: auto;
+    left: 20vmin;
+    bottom: 3%;
+  }
+  
+  #about-me-photo img{
+    justify-content: center;
+    border-radius: 30%;
+    width: 100%;
+    height: 100%;
+    margin-top: 4vh;
+    margin-bottom: 10px;
+    box-shadow: -1vw 1vw 5vw 1vw #0b0d12;
+  }
+  #contact{
+    height: 25vmin;
+  }
+}
