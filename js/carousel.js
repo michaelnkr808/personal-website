@@ -20,7 +20,19 @@ const projDescriptions = [
     (Click the image to learn more)`
   },
   {
-    title: "Project 2",
+    title: "Python Chat App",
+    body: `Built a server-client chatroom where multiple clients can connect simultaneously and exchange messages in real time.
+
+    - Implemented threading on the server to handle multiple active connections concurrently.
+    - Added broadcasting functionality so that messages from one client are relayed to all connected clients, simulating a shared group chatroom.
+    - Gained experience with socket programming, concurrent programming (threads), and network communication protocols.
+    
+    This project strengthened my understanding of socket programming, TCP/IP communication, and real-time client-server architecture.
+    It also gave me practical experience with concurrent programming using threads, implementing broadcasting systems for multi-client messaging, and applying error handling techniques to ensure stable connections and clean shutdowns.
+    (Click the image to learn more)`
+  },
+  {
+    title: "project 3",
     body: `Details coming soon.`
   }
 ];

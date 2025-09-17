@@ -204,7 +204,7 @@ hr{
 
 .carousel{
   position: relative;
-  height: 70vh;
+  height: 60vh;
   width: 70vw;
   margin: 0 auto;
   padding-top: 3vh;
@@ -225,7 +225,13 @@ hr{
 
 .carousel-track img.carousel-img--python-rat{
   object-fit: contain;
-  height: 60vh;
+  height: 100%;
+  background-color: #0a0d14;
+}
+
+.carousel-track img.carousel-img--python-chat-app{
+  object-fit: contain;
+  height: 100%;
   background-color: #0a0d14;
 }
 
@@ -249,6 +255,10 @@ hr{
   top: 0;
   bottom: 0;
   width: 100%;
+}
+
+.carousel-slide current-slide{
+  
 }
 
 .carousel-button{
