@@ -1,73 +1,78 @@
-# React + TypeScript + Vite
+# My Personal Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my personal website! This site showcases my projects, portfolio, and background as a developer.
 
-Currently, two official plugins are available:
+## 🧩 About
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This website serves as a digital portfolio and personal hub where visitors can explore my work, learn about my technical skills, and get to know me better. The site is designed with a focus on responsiveness, performance, and user experience.
 
-## React Compiler
+## 🚀 Technologies
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+The website is built with the following technologies:
 
-## Expanding the ESLint configuration
+* **Frontend:** HTML, CSS, JavaScript
+* **Frameworks/Libraries:** React (migration in progress), Tailwind CSS (planned)
+* **Version Control:** Git & GitHub
+* **Development Tools:** Vite (for React build), ESLint (code quality)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 📁 Project Structure
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```
+my-personal-website/
+├── index.html              # Main landing page
+├── css/
+│   └── styles.css          # Global styles
+├── js/
+│   ├── main.js             # Main JavaScript logic
+│   └── carousel.js         # Image carousel functionality
+├── media/                  # Images and assets
+│   ├── me-portrait.jpg
+│   ├── me-landscape.jpg
+│   ├── code-fav-icon.svg
+│   └── ...
+└── README.md               # Project documentation
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🔄 Current Status
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+This project is currently being migrated from vanilla JavaScript to React to improve maintainability and add modern features. The vanilla JS version is preserved in the project history.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 🌎 Deployment
+
+Feel free to visit my site at: *[Coming Soon]*
+
+## 📝 Future Enhancements
+
+- [ ] Complete React migration
+- [ ] Implement Tailwind CSS
+- [ ] Add dark mode toggle
+- [ ] Include blog section
+- [ ] Add contact form
+- [ ] Optimize for SEO
+
+## 🛠️ Local Development
+
+To run this project locally:
+
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/my-personal-website.git
+
+# Navigate to project directory
+cd my-personal-website
+
+# Open in browser (for vanilla JS version)
+open index.html
+
+# For React version (coming soon):
+npm install
+npm run dev
 ```
+
+## 📬 Contact
+
+Have questions or want to connect? Feel free to reach out!
+
+---
+
+Thank you for visiting! ⭐
