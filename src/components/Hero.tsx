@@ -8,11 +8,29 @@ export default function Hero(){
         AOS.init({ duration:3000, once:true });
     }, []);
     return(
-        <div className="hero bg-[#0c2940] h-150 w-">
-            <div className="space-y-40 p-10 bg-[#0c1a2b] text-white min-h-screen">
-                <div data-aos="zoom-in" className="bg-[#1a2a3b] p-8 rounded-lg">
-                    <h2 className="text-2xl font-bold">Hey there, im <span className="text-[#2289e3]">Michael</span></h2>
-                    <img src={meImg} alt="photo of me" className="w-64 h-64"/>
+        <div className="hero bg-[#0a2a4a] h-50 w-">
+            <div className="space-y-1 p-10 bg-[#0c1a2b] text-white min-h-screen">
+                <div data-aos="zoom-in" className="bg-[#0b233b] p-8 rounded-xl flex flex-col shadow-xl h-200">
+                    <h2 className=" flex text-2xl font-bold text-center bg-[#112840] mb-5 rounded-2xl h-15 justify-center items-center shadow-2xl">Hey there, im <span className="text-[#2289e3]">&nbsp;Michael</span></h2>
+                    <div className="flex justify-between">
+                        <div data-aos="zoom-in-right" className="flex justify-start text-lg text-left bg-[#112840] rounded-2xl w-80 p-5 hidden md:flex shadow-xl">
+                            Welcome to my site! I'm Michael
+                            I'm a computer science student at UC Santa Cruz fascinated by how machines understand and process language.
+                            Currently working on RAG projects and building full-stack applications.
+                            I love the challenge of making AI accessible through clean, intuitive interfaces.</div>
+                        <img data-aos="zoom-in-up" src={meImg} alt="photo of me" className="w-75 h-75 lg:75 lg:75 rounded-2xl shadow-xl"/>
+                    </div>
+                </div>
+            <div data-aos="zoom-in" className="bg-[#0b233b] p-8 rounded-xl flex flex-col shadow-xl h-200">
+                    <h2 className=" flex text-2xl font-bold text-center bg-[#112840] mb-5 rounded-2xl h-15 justify-center items-center shadow-2xl">Hey there, im <span className="text-[#2289e3]">&nbsp;Michael</span></h2>
+                    <div className="flex justify-between">
+                        <div data-aos="zoom-in-right" className="flex justify-start text-lg text-left bg-[#112840] rounded-2xl w-80 p-3 hidden md:flex shadow-xl">
+                            Welcome to my site! I'm Michael
+                            I'm a computer science student at UC Santa Cruz fascinated by how machines understand and process language.
+                            Currently working on RAG projects and building full-stack applications.
+                            I love the challenge of making AI accessible through clean, intuitive interfaces.</div>
+                        <img data-aos="zoom-in-up" src={meImg} alt="photo of me" className="w-67 h-67 lg:67 lg:67 rounded-4xl shadow-xl"/>
+                    </div>
                 </div>
             </div>
         </div>
