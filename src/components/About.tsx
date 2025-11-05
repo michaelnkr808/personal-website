@@ -9,11 +9,11 @@ export default function About(){
         AOS.init({ duration:3000, once:true });
     }, []);
     return(
-        <div id="about" className="min-h-screen flex flex-col justify-center items-center w-full">
-            <div data-aos="zoom-in" className="bg-[#0b233b] p-8 rounded-xl flex flex-col shadow-2xl">
-                <h2 className=" flex text-2xl font-bold text-center bg-[#112840] mb-5 rounded-2xl h-15 justify-center shadow-2xl p-3">Here's a little <span className="text-[#2289e3]">&nbsp;About Me:</span></h2>
-                    <div className="flex justify-between gap-8">
-                        <div data-aos="zoom-in-right" className="flex justify-start text-md text-left bg-[#112840] rounded-2xl w-95 p-4 hidden md:flex shadow-2xl">
+        <div id="about" className="min-h-screen flex flex-col justify-center items-center w-screen p-10">
+            <div data-aos="zoom-in" className="bg-[#0b233b] p-10 rounded-xl flex flex-col shadow-2xl">
+                <h2 className=" flex text-lg md:text-2xl font-bold text-center bg-[#112840] mb-5 rounded-2xl h-15 justify-center items-center shadow-2xl p-3">Here's a little <span className="text-[#2289e3]">&nbsp;About Me:</span></h2>
+                    <div className="flex flex-col justify-between gap-8">
+                        <div data-aos="zoom-in-right" className="flex justify-start text-md md:text-lg text-left bg-[#112840] rounded-2xl w-110 p-4 hidden md:flex shadow-2xl">
                             I'm passionate about artificial intelligence and natural language processing. There's something fascinating about teaching machines to understand and generate human
                             language—it's like building a bridge between human thought and computational power.
                             Right now, I'm working on two RAG projects that I'm really excited about. RTFM helps communities avoid answering the same questions over and over by retrieving previous 
@@ -22,8 +22,7 @@ export default function About(){
                             When I'm not training models or debugging code, I'm building full-stack web applications with React and Tailwind CSS. Outside of tech, you'll find me on the mats training jiu jitsu—I 
                             love the problem-solving aspect and the constant learning, much like coding.
                         </div>
-                    <div>
-                        <div className="flip-card w-70 h-90 md:w-72 md:h-72">
+                        <div className="flip-card w-full h-105 md:w- md:h-72">
                             <div className="flip-card-inner w-full h-full md:w-75 md:h-75 relative">
                                 <div className="flip-card-front absolute w-full h-full">
                                         <img data-aos="zoom-in-up" src={beachImg} 
@@ -31,24 +30,30 @@ export default function About(){
                                                                    className="w-full h-full object-cover md:w-75 md:h-75 rounded-2xl shadow-2xl"/>
                                     </div>  
                                     <div className="flip-card-back absolute w-full h-full bg-[#112840] flex justify-center items-center p-4 rounded-2xl shadow-2xl text-center text-white">
-                                    <div className="text-xs">
+                                    <div className="text-s">
                                         I'm passionate about artificial intelligence and natural language processing. There's something fascinating about teaching machines to understand and generate human
                                         language—it's like building a bridge between human thought and computational power.
-                                        Right now, I'm working on two RAG projects that I'm really excited about. RTFM helps communities avoid answering the same questions over and over by retrieving previous 
-                                        eresponses—perfect for Discord servers, forums, or any place where "this has been answered before" is a common gripe. I'm also working on Smart Plate, an AI-powered nutrition 
-                                        tracking system that makes logging meals and getting fitness advice smarter and more intuitive.
-                                        When I'm not training models or debugging code, I'm building full-stack web applications with React and Tailwind CSS. Outside of tech, you'll find me on the mats training jiu jitsu—I 
-                                        love the problem-solving aspect and the constant learning, much like coding.
+                                        When I'm not working with AI or debugging code, I'm building full-stack web applications with React and Tailwind CSS. Outside of tech, you'll find me on the mats training jiu jitsu or off on a hike
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <img data-aos="fade-up-left" src={hikeImg}
-                                                     alt="Me on a hike"
-                                                     className="h-70 w-80 rounded-2xl mt-6 shadow-2xl"/>
+                        <div className="mt-5 flip-card w-full h-70 md:w-72 md:h-72">
+                            <div className="flip-card-inner w-full h-full md:w-75 md:h-75 relative">
+                                <div className="flip-card-front absolute w-full h-full">
+                                        <img data-aos="zoom-in-up" src={hikeImg} 
+                                                                   alt="Photo of me on a hike in Winters, California" 
+                                                                   className="w-full h-full object-cover md:w-75 md:h-75 rounded-2xl shadow-2xl"/>
+                                    </div>  
+                                    <div className="flip-card-back absolute w-full h-full bg-[#112840] flex justify-center items-center p-4 rounded-2xl shadow-2xl text-center text-white">
+                                    <div className="text-s">
+                                        This was an awesome hike I went on in Winters California called Blue Ridge loop.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
     )
 }

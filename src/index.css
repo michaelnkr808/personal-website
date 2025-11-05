@@ -6,7 +6,11 @@
     }
 
     body{
-        @apply bg-[#051a2b] text-white;
+        @apply text-white bg-[#051a2b];
+        background-image: url('assets/xdxfdc1.jpg');
+        background-repeat: repeat;
+        background-size: cover;
+        background-position: top left;
     }
 }
 
