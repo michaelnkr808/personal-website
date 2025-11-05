@@ -23,7 +23,7 @@ export default function Hero(){
                             <div className="flip-card-inner w-full h-full md:w-75 md:h-75 relative">
                                 <div className="flip-card-front absolute w-full h-full">
                                         <img data-aos="zoom-in-up" src={meImg} 
-                                                                   alt="photo of me" 
+                                                                   alt="Photo of me" 
                                                                    className="w-full h-full object-cover md:w-75 md:h-75 rounded-2xl shadow-2xl"/>
                                     </div>  
                                     <div className="flip-card-back absolute w-full h-full bg-[#112840] flex justify-center items-center p-4 rounded-2xl shadow-2xl text-center text-white">
@@ -37,9 +37,22 @@ export default function Hero(){
                         </div>
                     </div>
                     <div>
-                        <img data-aos="fade-up-left" src={acmImg} 
-                                                     alt="UCSC campus view"
-                                                     className="mt-5 rounded-2xl shadow-2xl" />
+                        <div className="flip-card w-90 h-60 md:w-72 md:h-72">
+                            <div className="flip-card-inner w-full h-full md:w-75 md:h-75 relative">
+                                <div className="flip-card-front absolute w-full h-full">
+                                        <img data-aos="zoom-in-up" src={acmImg} 
+                                                                   alt="Photo of me with the ACM club during our intel visit" 
+                                                                   className="mt-5 w-full h-full rounded-2xl shadow-2xl"/>
+                                    </div>  
+                                    <div className="flip-card-back absolute w-full h-full bg-[#112840] flex justify-center items-center p-4 rounded-2xl shadow-2xl text-center text-white">
+                                    <div>
+                                        This photo is from my visit to intel in Santa Clara with the ACM Club at UCSC
+                                        which I am apart of. I had a great time and got to connect with several experts
+                                        in the industry. I also won some cool prizes!
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
