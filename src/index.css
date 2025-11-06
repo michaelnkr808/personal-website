@@ -3,6 +3,7 @@
 @layer base{
     html{
         scroll-behavior: smooth;
+        font-family: 'Courier New', Courier, monospace
     }
 
     body{
@@ -43,7 +44,7 @@
     transform: rotateY(180deg) translateZ(0);
 }
 
-@media(max-width:768px){
+@media(max-width:767px){
     .flip-card:hover .flip-card-inner{
         transform:rotateY(180deg);
     }

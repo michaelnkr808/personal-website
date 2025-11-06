@@ -10,12 +10,12 @@ export default function Hero(){
         AOS.init({ duration:3000, once:true });
     }, []);
     return(
-        <div id="home" className="hero min-h-screen flex flex-col justify-center items-center p-20 ">
+        <div id="home" className="hero min-h-screen flex flex-col justify-center items-center p-4 md:p-10 lg:p-20">
             <div data-aos="zoom-in" className="bg-[#0b233b] p-8 rounded-xl flex flex-col shadow-2xl ">
                 <h2 className="flex text-lg md:text-2xl font-bold text-center bg-[#112840] mb-5 rounded-2xl h-15 justify-center items-center shadow-2xl p-2">Hey there, im <span className="text-[#2289e3]">&nbsp;Michael!</span></h2>
                     <div className="flex justify-evenly gap-8">
                         {/*flex flex-col md:flex-row justify-between gap-8*/}
-                        <div data-aos="zoom-in-right" className="flex justify-start text-lg text-left bg-[#112840] rounded-2xl p-5 hidden md:flex shadow-xl flex-1 max-w-2xl">
+                        <div data-aos="zoom-in-right" className="flex justify-start text-lg text-left bg-[#112840] rounded-2xl p-5 hidden md:flex shadow-xl flex-1 max-w-2xl w-10">
                             Welcome to my site! I'm Michael
                             I'm a computer science student at UC Santa Cruz fascinated by how machines understand and process language.
                             Currently working on RAG projects and building full-stack applications.
@@ -38,7 +38,7 @@ export default function Hero(){
                         </div>
                     </div>
                     <div>
-                        <div className="flip-card mt-5 w-90 h-60 md:w-180 md:h-123 md:p-4">
+                        <div className="flip-card mt-5 w-90 h-60 md:w-160 md:h-110 md:p-4">
                             <div className="flip-card-inner w-full h-full md:w-75 md:h-75 relative">
                                 <div className="flip-card-front absolute w-full h-full p-2">
                                         <img data-aos="zoom-in-up" src={acmImg} 

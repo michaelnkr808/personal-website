@@ -9,11 +9,11 @@ export default function About(){
         AOS.init({ duration:3000, once:true });
     }, []);
     return(
-        <div id="about" className="min-h-screen flex flex-1 flex-col justify-center items-center w-screen p-10">
+        <div id="about" className="min-h-screen flex flex-1 flex-col justify-center items-center w-screen p-4 md:p-10">
             <div data-aos="zoom-in" className="bg-[#0b233b] p-10 rounded-xl flex flex-col shadow-2xl">
                 <h2 className=" flex text-lg md:text-2xl font-bold text-center bg-[#112840] mb-5 rounded-2xl h-15 justify-center items-center shadow-2xl p-3">Here's a little <span className="text-[#2289e3]">&nbsp;About Me:</span></h2>
-                    <div className="flex flex-col md:flex-row justify-between gap-8">
-                        <div data-aos="zoom-in-right" className="flex justify-start items-center text-center text-sm max-[567px]:text-sm min-[927px]:text-base min-[1023px]:text-base lg:text-lg xl:text-xl bg-[#112840] rounded-2xl p-4 hidden md:flex shadow-2xl flex-1 max-w-2xl">
+                    <div className="flex flex-col md:flex-row justify-between gap-5 items-center">
+                        <div data-aos="zoom-in-right" className="flex justify-start items-center text-center text-sm ax-[567px]:text-sm min-[768px]:text-sm min-[927px]:text-base min-[1023px]:text-base lg:text-lg xl:text-xl bg-[#112840] rounded-2xl p-4 hidden md:flex shadow-2xl flex-1 max-w-2xl">
                             I'm passionate about artificial intelligence and natural language processing. There's something fascinating about teaching machines to understand and generate human
                             language—it's like building a bridge between human thought and computational power.
                             Right now, I'm working on two RAG projects that I'm really excited about. RTFM helps communities avoid answering the same questions over and over by retrieving previous 
@@ -39,7 +39,7 @@ export default function About(){
                                     </div>
                                 </div>
                             </div>
-                            <div className="mt-5 flip-card w-90 h-80 md:w-80 md:h-72">
+                            <div className="mt-6 flip-card w-90 h-80 md:w-80 md:h-72">
                                 <div className="flip-card-inner w-full h-full md:w-75 md:h-75 relative">
                                     <div className="flip-card-front absolute w-full h-full p-1">
                                             <img data-aos="zoom-in-up" src={hikeImg} 
