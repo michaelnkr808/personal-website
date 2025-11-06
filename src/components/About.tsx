@@ -9,7 +9,7 @@ export default function About(){
         AOS.init({ duration:3000, once:true });
     }, []);
     return(
-        <div id="about" className="min-h-screen flex flex-1 flex-col justify-center items-center w-screen p-4 md:p-10">
+        <div id="about" className="min-h-screen flex flex-1 flex-col justify-center items-center w-full p-4 md:p-10">
             <div data-aos="zoom-in" className="bg-[#0b233b] p-10 rounded-xl flex flex-col shadow-2xl">
                 <h2 className=" flex text-lg md:text-2xl font-bold text-center bg-[#112840] mb-5 rounded-2xl h-15 justify-center items-center shadow-2xl p-3">Here's a little <span className="text-[#2289e3]">&nbsp;About Me:</span></h2>
                     <div className="flex flex-col md:flex-row justify-between gap-5 items-center">
@@ -44,7 +44,7 @@ export default function About(){
                                     <div className="flip-card-front absolute w-full h-full p-1">
                                             <img data-aos="zoom-in-up" src={hikeImg} 
                                                                     alt="Photo of me on a hike in Winters, California" 
-                                                                    className="w-full h-full object-cover md:w-75 md:h-75 rounded-2xl shadow-2xl"/>
+                                                                    className="w-full h-full object-cover md:w-77 md:h-75 rounded-2xl shadow-2xl"/>
                                         </div>  
                                         <div className="flip-card-back absolute w-full h-full bg-[#112840] flex justify-center items-center p-4 rounded-2xl shadow-2xl text-center text-white">
                                         <div className="text-s">
