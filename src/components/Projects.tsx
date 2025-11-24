@@ -21,7 +21,7 @@ export default function Projects(){
             "FastAPI endpoints for ingest/query",
             "Discord bot integration",
         ],
-        tech: ["Python", "FastAPI", "ChromaDB", "Gemini Embeddings"],
+        tech: ["Python", "FastAPI", "ChromaDB", "Gemini Embeddings", "PostgreSQL", "Docker"],
         github: "https://github.com/michaelnkr808/rtfm-rag-pipeline",
         diagram: 
         `         [Discord Message]
@@ -47,8 +47,61 @@ export default function Projects(){
       `,
         
         },
-        {name: "project2", description: "test2", features:["test"], tech:["tech"]},
-        {name: "project3", description: "test3"},
+         {
+        name: "AGNI-Network",
+        description:
+        "Built at the 2025 Reboot the Earth Hackathon, AGNI Network: A fire-risk dashboard that aggregates public weather and drought data to map California by fire danger, powered by an AI agent that makes recommendations to first responders and predicts risk.",
+        features: [
+        "Aggregates data from weather.gov, NASA, droughtmonitor.edu",
+        "AI-agent predicts fire danger scores",
+        "Heatmap visualization by county",
+        "Alerts first responders when risk is high",
+        "Scalable to other states / regions"
+        ],
+        tech: ["React", "TypeScript", "Python", "FastAPI", "Langchain", "Docker", "Gemini API"],
+        github: "https://github.com/beong789/AGNI-Network",
+        diagram: `
+                [Public Datasets]
+                    │
+                    ▼
+            [Weather / Drought Data]
+                    │
+                    ▼
+            [AI Agent: Fire Risk Prediction]
+                    │
+                    ▼
+            [Fire Danger Score Map (CA heatmap)]
+                    │
+            ┌────┴────┐
+            ▼         ▼
+        [Alert Fire Dept] [Dashboard Visualization]
+            `
+    },
+
+        {name: "Sluggle", 
+        description: "Sluggle: An iOS app that recommends events and activities based on the user’s budget.",
+        features:["Budget-based event recommendation",
+                "User authentication / login",
+                "Backend service for event data",
+                "Model-View-ViewModel (MVVM) architecture (iOS)",
+                "Scalable service design"],
+        tech:["ReactNative", "PostgreSQL", "Python", "FastAPI"],
+        github: "https://github.com/beong789/Sluggle",
+        diagram:`
+            [User opens app]
+                    │
+                    ▼
+                [User inputs budget]
+                    │
+                    ▼
+                [Backend Service fetches events]
+                    │
+                    ▼
+                [Recommendation Model / Logic]
+                    │
+                    ▼
+                [Events list displayed in UI]
+        `},
     ]
         
     function backButton(){
