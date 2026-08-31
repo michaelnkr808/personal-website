@@ -26,7 +26,7 @@ export const education = {
   school: 'University of California, Santa Cruz',
   location: 'Santa Cruz, CA',
   degree: 'B.S. in Computer Science',
-  gpa: '3.73 / 4.0',
+  gpa: '3.82 / 4.0',
   graduation: 'Expected December 2027',
 }
 
