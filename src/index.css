@@ -171,3 +171,9 @@ li {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
+
+.coursework {
+  margin: 0.4rem 0 0;
+  font-size: 0.95rem;
+  color: #333;
+}

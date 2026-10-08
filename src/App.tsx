@@ -2,12 +2,41 @@ import {
   awards,
   education,
   experience,
+  leadership,
   personalNote,
   personalPhotos,
   profile,
   projects,
   skills,
+  type ExperienceEntry,
 } from './siteData'
+
+function ExperienceItem({ entry }: { entry: ExperienceEntry }) {
+  return (
+    <div className="entry">
+      <div className="entry-head">
+        <strong>{entry.title}</strong>
+        <span>{entry.timeframe}</span>
+      </div>
+      <div className="entry-sub">
+        <em>{entry.org}</em>
+        <span>{entry.location}</span>
+      </div>
+      <ul>
+        {entry.bullets.map((b) => (
+          <li key={b}>{b}</li>
+        ))}
+      </ul>
+      {entry.image ? (
+        <img
+          className="entry-image"
+          src={entry.image.src}
+          alt={entry.image.alt}
+        />
+      ) : null}
+    </div>
+  )
+}
 
 function App() {
   return (
@@ -30,28 +59,7 @@ function App() {
           <section>
             <h2>Experience</h2>
             {experience.map((entry) => (
-              <div className="entry" key={entry.title + entry.org}>
-                <div className="entry-head">
-                  <strong>{entry.title}</strong>
-                  <span>{entry.timeframe}</span>
-                </div>
-                <div className="entry-sub">
-                  <em>{entry.org}</em>
-                  <span>{entry.location}</span>
-                </div>
-                <ul>
-                  {entry.bullets.map((b) => (
-                    <li key={b}>{b}</li>
-                  ))}
-                </ul>
-                {entry.image ? (
-                  <img
-                    className="entry-image"
-                    src={entry.image.src}
-                    alt={entry.image.alt}
-                  />
-                ) : null}
-              </div>
+              <ExperienceItem entry={entry} key={entry.title + entry.org} />
             ))}
           </section>
 
@@ -83,6 +91,13 @@ function App() {
               </div>
             ))}
           </section>
+
+          <section>
+            <h2>Leadership</h2>
+            {leadership.map((entry) => (
+              <ExperienceItem entry={entry} key={entry.title + entry.org} />
+            ))}
+          </section>
         </div>
 
         <aside className="side-col">
@@ -99,6 +114,9 @@ function App() {
                 <span>GPA {education.gpa}</span>
                 <span>{education.graduation}</span>
               </div>
+              <p className="coursework">
+                <strong>Coursework:</strong> {education.coursework}
+              </p>
             </div>
           </section>
 
@@ -113,6 +131,9 @@ function App() {
               </li>
               <li>
                 <strong>Tools:</strong> {skills.tools}
+              </li>
+              <li>
+                <strong>Concepts:</strong> {skills.concepts}
               </li>
             </ul>
           </section>

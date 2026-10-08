@@ -7,6 +7,7 @@ import mentraGlasses from './assets/mentra-glasses.png'
 import blueprintTeam from './assets/blueprint-full-team.jpg'
 import cruzhacksAward from './assets/cruzhacks-award.jpeg'
 import rebootTeam from './assets/reboot-the-earth-team.jpeg'
+import acmIntel from './assets/acm2025.jpg'
 
 type EntryImage = {
   src: string
@@ -15,7 +16,7 @@ type EntryImage = {
 
 export const profile = {
   name: 'Michael Ramirez',
-  phone: '808-300-9954',
+  phone: '808-330-9954',
   email: 'michaelnkr808@gmail.com',
   github: 'https://github.com/michaelnkr808',
   linkedin: 'https://linkedin.com/in/',
@@ -28,6 +29,8 @@ export const education = {
   degree: 'B.S. in Computer Science',
   gpa: '3.82 / 4.0',
   graduation: 'Expected December 2027',
+  coursework:
+    'Data Structures & Algorithms, Artificial Intelligence, Machine Learning (Graduate), Probability Theory, Computer Systems & Assembly Language, C Programming',
 }
 
 export type ExperienceEntry = {
@@ -41,14 +44,28 @@ export type ExperienceEntry = {
 
 export const experience: ExperienceEntry[] = [
   {
-    title: 'Undergraduate Researcher',
+    title: 'Group Tutor, CSE 13S (Computer Systems & C Programming)',
     org: 'UC Santa Cruz',
     location: 'Santa Cruz, CA',
-    timeframe: 'January 2026 – Present',
+    timeframe: 'Sep 2026 – Present',
     bullets: [
-      'Built a 3D scene understanding pipeline integrating Gaussian Splatting geometry modeling with language-aligned feature learning on Meta ARIA glasses data.',
-      'Combined SAM2 segmentation with vision-language embeddings to enable open-vocabulary scene reconstruction and agent-based natural language querying.',
-      'Streamlined research workflows by containerizing training pipelines with Kubernetes for senior research group members.',
+      'Lead group tutoring sessions on C programming, memory management, pointers, and debugging.',
+      'Help students work through assignments using GDB, Valgrind, and Makefiles.',
+      'Explain systems concepts including bit manipulation, dynamic memory allocation, and implementing data structures in C.',
+      'Guide students through tracking down segfaults and memory leaks by walking through their code line by line.',
+    ],
+  },
+  {
+    title: 'Undergraduate ML Researcher',
+    org: 'UC Santa Cruz',
+    location: 'Santa Cruz, CA',
+    timeframe: 'Jan 2026 – Present',
+    bullets: [
+      'Reconstructed 3D scenes from Meta ARIA glasses data by modeling geometry with 3D Gaussian Splatting.',
+      'Enabled open-vocabulary 3D scene search by fusing SAM2 segmentation masks with vision-language embeddings.',
+      'Answered natural language questions about reconstructed scenes through agent-based querying.',
+      'Standardized training for 5+ researchers in a 15-person lab by containerizing pipelines with Docker and Kubernetes.',
+      'Presented research outcomes and pipeline progress to the 15-person lab group and supervising professor.',
     ],
     image: {
       src: researchAriaBoxes,
@@ -56,17 +73,36 @@ export const experience: ExperienceEntry[] = [
     },
   },
   {
-    title: 'Developer',
-    org: 'Blueprint (UCSC student org)',
+    title: 'Software Developer',
+    org: 'Blueprint',
     location: 'Santa Cruz, CA',
-    timeframe: 'December 2025 – Present',
+    timeframe: 'Dec 2025 – Jun 2026',
     bullets: [
-      'Contributed to frontend development of web applications for local nonprofit organizations using React, React Native, TypeScript, and TailwindCSS.',
-      'Collaborated in a team environment using Git-based workflows and Linear for issue tracking and project coordination.',
+      "Shipped 6+ frontend features for a nonprofit client's web and mobile app as part of a 20-person team.",
+      'Implemented UI components in React, React Native, TypeScript, and TailwindCSS across web and mobile.',
+      "Collaborated across dev and design teams, turning the design team's Figma mockups into working web and mobile screens.",
+      'Delivered changes through pull-request-based Git workflows with peer code review, tracking tasks in Linear.',
     ],
     image: {
       src: blueprintTeam,
       alt: 'Blueprint development team on a bridge.',
+    },
+  },
+]
+
+export const leadership: ExperienceEntry[] = [
+  {
+    title: 'Research Lab Lead & Instruction Officer',
+    org: 'Association for Computing Machinery (ACM), UC Santa Cruz',
+    location: 'Santa Cruz, CA',
+    timeframe: 'Oct 2026 – Present',
+    bullets: [
+      "Lead ACM's student research lab, guiding members through ML and systems research projects.",
+      'Run technical workshops and instructional sessions for ACM members.',
+    ],
+    image: {
+      src: acmIntel,
+      alt: 'UCSC ACM members in front of the Intel sign.',
     },
   },
 ]
@@ -87,9 +123,11 @@ export const projects: ProjectEntry[] = [
     stack: 'TypeScript, Bun, Python, FastAPI, PostgreSQL/pgvector, InsightFace, Gemini 2.5',
     timeframe: 'Feb 2026 – Present',
     bullets: [
-      'Built a voice-activated face recognition and memory assistant for MentraOS smart glasses that links facial embeddings with conversational context.',
-      'Designed a Python/FastAPI backend storing and querying face embeddings in PostgreSQL with pgvector, served from a TypeScript/Bun on-device client (MentraOS SDK).',
-      'Integrated InsightFace for face detection/encoding and Gemini 2.5 Flash to extract structured identity and context from raw conversation transcripts.',
+      'Helped users remember people through voice commands to save, recognize, look up, and forget contacts on MentraOS glasses.',
+      'Linked faces to conversation context by pairing InsightFace encodings with Gemini 2.5 Flash transcript extraction.',
+      'Matched returning faces per user with pgvector L2-distance search over 512-d embeddings in a FastAPI backend.',
+      'Cut photo capture latency by triggering the camera on partial speech transcriptions before commands finalized.',
+      'Filtered false face detections with confidence thresholds, minimum size checks, and upscaling of small glasses images.',
     ],
     image: {
       src: mentraGlasses,
@@ -99,12 +137,14 @@ export const projects: ProjectEntry[] = [
   {
     name: 'HardwareHub',
     url: 'https://github.com/michaelnkr808/cruzhacks-26',
-    stack: 'React, TypeScript, Vite, TailwindCSS, Hono, Supabase, Claude API',
+    stack: 'TypeScript, Hono, Supabase, Auth0, React, Opennote API',
     timeframe: 'Jan 2026',
     bullets: [
-      'Won Best Hardware Hack at CruzHacks 2026 — embedded-systems learning platform teaching ESP32/Arduino projects without requiring users to own hardware up front.',
-      'Built 27+ lessons across 5 learning paths with role-based progression, a drag-and-drop visual circuit editor, and gamified progress tracking backed by Supabase/PostgreSQL.',
-      'Integrated the Anthropic Claude API to generate personalized quizzes from student notes captured through the Opennote SDK.',
+      'Designed the backend of an ESP32/Arduino learning platform, exposing 39 REST endpoints in Hono over 6 Supabase tables.',
+      'Built a KiCad-style board editor where users drag 17 hardware modules onto a canvas and wire inputs to outputs.',
+      'Personalized studying by generating quizzes from lesson content and student notes through the Opennote Practice API.',
+      'Secured accounts with Auth0 passwordless email login and JWT verification middleware.',
+      'Motivated learners with 17 unlockable achievements for finishing lessons, acing quizzes, taking notes, and keeping streaks.',
     ],
     image: {
       src: cruzhacksAward,
@@ -133,9 +173,10 @@ export const awards: string[] = [
 ]
 
 export const skills = {
-  languages: 'Python, TypeScript/JavaScript, C, SQL (PostgreSQL)',
-  frameworks: 'PyTorch, FastAPI, React, React Native, TailwindCSS, Bun',
-  tools: 'Docker, Kubernetes, Git, PostgreSQL/pgvector',
+  languages: 'Python, TypeScript/JavaScript, C, C++, SQL (PostgreSQL), RISC-V Assembly, Bash',
+  frameworks: 'PyTorch, FastAPI, React, React Native, TailwindCSS, Bun, Vite, Hono, LangChain/LangGraph',
+  tools: 'Docker, Kubernetes, Git, Linux, PostgreSQL/pgvector, Supabase',
+  concepts: 'REST APIs, vector search & embeddings, computer vision, LLM agent workflows',
 }
 
 export type PersonalPhoto = {
