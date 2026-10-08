@@ -5,7 +5,7 @@ import personalTraining from './assets/personal-0910.png'
 import researchAriaBoxes from './assets/research-aria-boxes.png'
 import mentraGlasses from './assets/mentra-glasses.png'
 import blueprintTeam from './assets/blueprint-full-team.jpg'
-import cruzhacksAward from './assets/cruzhacks-award.jpeg'
+import cruzhacksAward from './assets/cruzhacks-award-cropped.jpeg'
 import rebootTeam from './assets/reboot-the-earth-team.jpeg'
 import acmIntel from './assets/acm2025.jpg'
 
