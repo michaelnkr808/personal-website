@@ -3,15 +3,146 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta
-      name="description"
-      content="Michael Ramirez — UC Santa Cruz computer science."
-    />
+    <meta name="color-scheme" content="light dark" />
     <title>Michael Ramirez</title>
+    <meta name="description" content="Michael Ramirez, computer science at UC Santa Cruz." />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/style.css" />
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <div class="wrapper">
+      <header>
+        <img src="/headshot.webp" alt="Michael Ramirez" width="160" height="160" />
+        <h1>Michael Ramirez</h1>
+        <p class="title">Computer Science, UC Santa Cruz</p>
+        <p class="email"><a href="mailto:michaelnkr808@gmail.com">michaelnkr808@gmail.com</a></p>
+        <p class="links">
+          <a href="https://github.com/michaelnkr808">GitHub</a>
+          <a href="https://www.linkedin.com/in/michael-ramirez-b99481381/">LinkedIn</a>
+          <a href="/resume.pdf">Resume</a>
+        </p>
+        <pre id="arm" aria-hidden="true"></pre>
+      </header>
+
+      <main>
+        <section id="about">
+          <h2>About</h2>
+          <p>I'm a computer science student at UC Santa Cruz, expecting to graduate in December 2027. I do undergraduate machine learning research on 3D scene reconstruction from Meta ARIA glasses data, and I tutor C programming in CSE 13S. I also build software like Visage, which lets people save and recall who they've met through voice commands on smart glasses.</p>
+          <p>Outside of school and projects I train jiu jitsu, hike, and spend time at the beach.</p>
+        </section>
+
+        <section id="experience">
+          <h2>Experience</h2>
+
+          <div class="entry">
+            <div class="head"><strong>Group Tutor, CSE 13S (Computer Systems &amp; C Programming)</strong><span class="date">Sep 2026 – Present</span></div>
+            <p class="sub">UC Santa Cruz</p>
+            <ul>
+              <li>Lead group tutoring sessions for CSE 13S students on C programming, memory management, pointers, and debugging.</li>
+              <li>Help students debug and complete assignments using GDB, Valgrind, and Makefiles in a Linux environment.</li>
+              <li>Explain systems concepts including bit manipulation, dynamic memory allocation, and data structures in C.</li>
+              <li>Guide students through tracking down segfaults and memory leaks by walking through their code line by line.</li>
+            </ul>
+          </div>
+
+          <div class="entry">
+            <div class="head"><strong>Undergraduate ML Researcher</strong><span class="date">Jan 2026 – Present</span></div>
+            <p class="sub">UC Santa Cruz</p>
+            <ul>
+              <li>Reconstructed 3D scenes from Meta ARIA glasses data by modeling scene geometry with 3D Gaussian Splatting.</li>
+              <li>Enabled open-vocabulary 3D scene search by fusing SAM2 segmentation masks with vision-language embeddings.</li>
+              <li>Standardized training for 5+ lab researchers by containerizing ML pipelines with Docker and Kubernetes.</li>
+              <li>Presented research outcomes and pipeline progress to the 15-person lab group and supervising professor.</li>
+            </ul>
+          </div>
+
+          <div class="entry">
+            <div class="head"><strong>Software Engineer Intern</strong><span class="date">Dec 2025 – Jun 2026</span></div>
+            <p class="sub">United Way</p>
+            <ul>
+              <li>Shipped 6+ frontend features for a nonprofit's cross-platform web and mobile app as part of a 20-person team.</li>
+              <li>Implemented UI components in React, React Native, TypeScript, and TailwindCSS across web and mobile.</li>
+              <li>Collaborated across dev and design teams, turning Figma mockups into working web and mobile screens.</li>
+              <li>Delivered changes through pull-request-based Git workflows with peer code review, tracking tasks in Linear.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="projects">
+          <h2>Projects</h2>
+
+          <div class="entry">
+            <div class="head"><strong><a href="https://github.com/michaelnkr808/visage">Visage</a></strong><span class="date">Feb 2026 – Present</span></div>
+            <p class="sub">TypeScript, Bun, Python, FastAPI, PostgreSQL/pgvector, InsightFace, Gemini 2.5</p>
+            <ul>
+              <li>Built voice commands on MentraOS smart glasses that let users save, recognize, look up, and forget people they've met.</li>
+              <li>Linked faces to conversation context by pairing InsightFace encodings with Gemini 2.5 Flash transcript extraction.</li>
+              <li>Matched returning faces per user with pgvector L2-distance search over 512-d face embeddings in a FastAPI backend.</li>
+              <li>Cut photo capture latency by triggering the glasses camera on partial speech transcripts before commands finalized.</li>
+              <li>Filtered false face detections using confidence thresholds, minimum size checks, and upscaling of small glasses images.</li>
+            </ul>
+          </div>
+
+          <div class="entry">
+            <div class="head"><strong><a href="https://github.com/michaelnkr808/cruzhacks-26">HardwareHub</a></strong><span class="date">Jan 2026</span></div>
+            <p class="sub">Best Hardware Hack, CruzHacks 2026</p>
+            <p class="sub">TypeScript, Hono, Supabase, Auth0, React, Opennote API</p>
+            <ul>
+              <li>Designed an ESP32/Arduino learning platform backend with 39 REST endpoints in Hono over 6 Supabase tables.</li>
+              <li>Built a KiCad-style board editor where users drag 17 hardware modules onto a canvas and wire inputs to outputs.</li>
+              <li>Personalized studying by generating quizzes from lesson content and student notes via the Opennote Practice API.</li>
+              <li>Secured user accounts and API routes with Auth0 passwordless email login and JWT verification middleware in Hono.</li>
+              <li>Motivated learners with 17 unlockable achievements for completing lessons, acing quizzes, and maintaining streaks.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="leadership">
+          <h2>Leadership</h2>
+
+          <div class="entry">
+            <div class="head"><strong>Research Lab Lead &amp; Instruction Officer</strong><span class="date">Oct 2026 – Present</span></div>
+            <p class="sub">Association for Computing Machinery (ACM), UC Santa Cruz</p>
+            <ul>
+              <li>Lead ACM's undergraduate research lab, mentoring student teams through ML and systems research projects.</li>
+              <li>Run technical workshops and instructional sessions for ACM members on tools like PyTorch, Git, and Docker.</li>
+              <li>Help members scope research ideas into quarter-long projects and present results at end-of-quarter showcases.</li>
+            </ul>
+          </div>
+
+          <div class="entry">
+            <div class="head"><strong>Awards &amp; Health/Wellness Chair</strong><span class="date">Oct 2026 – Present</span></div>
+            <p class="sub">Kappa Sigma, UC Santa Cruz</p>
+            <ul>
+              <li>Organize health and wellness events for chapter members, promoting physical fitness and mental health resources.</li>
+              <li>Recognize member achievements in academics, athletics, and community service through chapter awards.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="education">
+          <h2>Education</h2>
+          <div class="entry">
+            <div class="head"><strong>University of California, Santa Cruz</strong><span class="date">Expected December 2027</span></div>
+            <p class="sub">B.S. in Computer Science, GPA 3.82/4.0</p>
+            <p><strong>Coursework:</strong> Machine Learning (Graduate), Artificial Intelligence, Data Structures &amp; Algorithms, Probability Theory, Linear Algebra, Discrete Mathematics, Software Engineering, Object-Oriented Python, Computer Systems &amp; Assembly Language</p>
+          </div>
+        </section>
+
+        <section id="skills">
+          <h2>Skills</h2>
+          <dl>
+            <dt>Languages</dt><dd>Python, TypeScript/JavaScript, C, C++, SQL (PostgreSQL), RISC-V Assembly, Bash</dd>
+            <dt>Frameworks</dt><dd>PyTorch, FastAPI, React, React Native, TailwindCSS, Bun, Vite, Hono, LangChain/LangGraph</dd>
+            <dt>Tools</dt><dd>Docker, Kubernetes, Git, Linux, PostgreSQL/pgvector, Supabase</dd>
+            <dt>Concepts</dt><dd>REST APIs, vector search &amp; embeddings, computer vision, LLM agent workflows</dd>
+          </dl>
+        </section>
+      </main>
+    </div>
+    <script type="module" src="/ascii.js"></script>
   </body>
 </html>

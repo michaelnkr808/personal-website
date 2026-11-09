@@ -1,0 +1,158 @@
+:root {
+  --bg: #faf8f5;
+  --text: #4f4a45;
+  --strong: #1f1c1a;
+  --heading: #8a4b14;
+  --link: #ad5e1d;
+  --link-hover: #7d410f;
+  --rule: #e7e1da;
+  --muted: #79716a;
+  --arm: #9a8f84;
+  --arm-faint: rgba(60, 40, 20, 0.08);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1d1b1e;
+    --text: #d9d4cf;
+    --strong: #f2eee9;
+    --heading: #e3a857;
+    --link: #e3a857;
+    --link-hover: #f3c98d;
+    --rule: #3a363a;
+    --muted: #9c958f;
+    --arm: #a39a90;
+    --arm-faint: rgba(255, 240, 220, 0.08);
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { background: var(--bg); }
+
+body {
+  margin: 0;
+  padding: 0 16px;
+  color: var(--text);
+  font-family: "Crimson Pro", Georgia, "Times New Roman", serif;
+  font-size: 17px;
+  line-height: 1.5;
+  overflow-wrap: break-word;
+}
+
+h1, h2 { color: var(--heading); line-height: 1.1; font-weight: 500; }
+h1 { font-size: 28px; margin: 0 0 8px; }
+h2 {
+  font-size: 157%;
+  margin: 0 0 15px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--rule);
+}
+p, ul { margin: 0 0 16px; }
+a { color: var(--link); text-decoration: none; }
+a:hover { color: var(--link-hover); }
+strong { color: var(--strong); font-weight: 600; }
+img { max-width: 100%; }
+
+.wrapper { max-width: 960px; margin: 0 auto; display: flow-root; }
+
+header {
+  width: 232px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  padding-top: 4em;
+  padding-bottom: 24px;
+  text-align: center;
+}
+header img {
+  display: block;
+  width: 160px;
+  height: 160px;
+  margin: 0 auto 16px;
+  border-radius: 50%;
+}
+header .title { margin: 0 0 6px; }
+header .email { margin: 0 0 6px; font-size: 16px; overflow-wrap: anywhere; }
+header .links a + a { margin-left: 12px; }
+
+/* ASCII object (ascii.js). Desktop: fills the empty space under the header links, spilling the same amount into both
+   sides so the drawing stays centered under the photo and name (always leaving 16px clear of the page edge and text). */
+#arm {
+  flex: 1;
+  min-height: 0;
+  /* --sbw is the classic scrollbar width, set from ascii.js (100vw includes the scrollbar). */
+  --spill: min(31px, 12px + max(0px, (100vw - var(--sbw, 15px) - 992px) / 2));
+  margin: 0 calc(-1 * var(--spill)) 16px; /* 16px of the header's own gap above, so equal gaps above and below */
+  display: flex; /* centers the drawing vertically when the box is a little taller than a whole number of rows */
+  flex-direction: column;
+  justify-content: center;
+  text-align: center; /* every line is the same length, so this centers the grid when the box is a bit wider */
+  overflow: hidden;
+  color: var(--arm);
+  white-space: pre;
+  font: 6px/1.1667 ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  font-variant-ligatures: none;
+  pointer-events: none;
+  user-select: none;
+}
+
+main {
+  width: 650px;
+  float: right;
+  padding-top: 4em;
+  padding-bottom: 50px;
+}
+
+section { margin-bottom: 32px; }
+
+.entry { margin-bottom: 22px; }
+.entry .head { display: flex; justify-content: space-between; gap: 16px; align-items: baseline; }
+.entry .date { color: var(--muted); white-space: nowrap; font-size: 15px; }
+.entry .sub { color: var(--muted); margin: 0 0 4px; }
+.entry ul { margin: 4px 0 0; padding-left: 22px; }
+.entry li { margin-bottom: 3px; }
+
+dl { margin: 0; }
+dt { color: var(--strong); font-weight: 600; }
+dd { margin: 0 0 8px; }
+
+@media (max-height: 599.98px) and (min-width: 961px) {
+  #arm { display: none; } /* not enough room for a recognizable arm */
+}
+
+@media (max-height: 420px) and (min-width: 961px) {
+  header { position: static; float: left; display: block; }
+}
+
+@media (max-width: 960px) {
+  .wrapper { margin: 0; }
+  header { position: static; display: block; width: auto; padding: 24px 0 8px; }
+  /* Single column: the arm becomes a faint fixed background behind the text. */
+  #arm {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    height: 100lvh; /* stable when the mobile address bar shows or hides */
+    flex: none;
+    z-index: -1;
+    margin: 0;
+    color: var(--arm-faint);
+    font-size: 12px;
+    line-height: 1.1667;
+  }
+  main { float: none; width: auto; padding-top: 16px; }
+}
+
+@media (forced-colors: active) {
+  #arm { display: none; } /* system colors would turn the background into solid glyphs over the text */
+}
+
+@media (max-width: 480px) {
+  .entry .head { display: block; }
+  .entry .date { display: block; }
+}
